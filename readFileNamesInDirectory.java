@@ -1,3 +1,5 @@
+http://stackoverflow.com/questions/1844688/read-all-files-in-a-folder
+
 File folder = new File("your/path");
 File[] listOfFiles = folder.listFiles();
 
