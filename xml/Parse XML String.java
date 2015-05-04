@@ -1,3 +1,17 @@
+	/**
+	 * Used to create/load a DocumentXML from a string_xml.
+	 * @param xml
+	 * @return
+	 * @throws Exception
+	 */
+	public static Document loadXMLFromString(String xml) throws Exception
+	{
+	    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+	    DocumentBuilder builder = factory.newDocumentBuilder();
+	    InputSource is = new InputSource(new StringReader(xml));
+	    return builder.parse(is);
+	}
+----------------------------------------------------------------------------------------------------------
 //http://www.rgagnon.com/javadetails/java-0573.html
 
 import javax.xml.parsers.*;
