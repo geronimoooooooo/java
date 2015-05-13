@@ -24,3 +24,16 @@ String filePath ="resources/file.xml";
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}			
+---------------------------------------------------------------
+http://www.mkyong.com/java/how-to-read-file-from-java-bufferedreader-example/
+try with resources; closes file automatically
+try (BufferedReader br = new BufferedReader(new FileReader("C:\\testing.txt")))
+		{
+			String sCurrentLine;
+			while ((sCurrentLine = br.readLine()) != null) {
+				System.out.println(sCurrentLine);
+			}
+ 
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
