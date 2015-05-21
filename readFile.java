@@ -1,3 +1,23 @@
+
+Es geht darum, wie man ein statisches file/xml im Tomcat lesen kann
+doGet(){
+response.getWriter().print("Das ist readfile");
+		InputStream input = Thread.currentThread().getContextClassLoader().getResourceAsStream("resources/css.css");
+		InputStreamReader isr = new InputStreamReader(input);
+		BufferedReader reader = new BufferedReader(isr);
+		
+		try (BufferedReader br = new BufferedReader(isr))
+		{
+			String sCurrentLine;
+			while ((sCurrentLine = br.readLine()) != null) {
+				System.out.println(sCurrentLine);
+				response.getWriter().print(sCurrentLine);
+			}
+ 
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
+------------------------------------------------------------------------------------------------------
 String filePath ="resources/file.xml";
 			
 			File file = new File("resources/file.xml");
