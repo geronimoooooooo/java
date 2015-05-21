@@ -1,4 +1,23 @@
-
+private List<String> readFile(String filename) throws Exception
+{
+    String line = null;
+    List<String> records = new ArrayList<String>();
+ 
+    // wrap a BufferedReader around FileReader
+    BufferedReader bufferedReader = new BufferedReader(new FileReader(filename));
+ 
+    // use the readLine method of the BufferedReader to read one line at a time.
+    // the readLine method returns null when there is nothing else to read.
+    while ((line = bufferedReader.readLine()) != null)
+    {
+        records.add(line);
+    }
+   
+    // close the BufferedReader when we're done
+    bufferedReader.close();
+    return records;
+}
+------------------------------------------
 Es geht darum, wie man ein statisches file/xml im Tomcat lesen kann
 doGet(){
 response.getWriter().print("Das ist readfile");
@@ -57,3 +76,27 @@ try (BufferedReader br = new BufferedReader(new FileReader("C:\\testing.txt")))
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
+-----------------------------------------------------------------------------
+URL url = new URL(theUrl);
+URLConnection urlConnection = url.openConnection();
+BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+ 
+String line;
+while ((line = bufferedReader.readLine()) != null)
+{
+    content.append(line + "\n");
+}
+bufferedReader.close();
+---------------------------------
+Read input from console
+
+System.out.print("Enter your name: ");
+ 
+        //  open up standard input, and buffer it
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+ 
+        // use the readLine method of the BufferedReader class
+        // to get whatever line the user types in:
+        userName = bufferedReader.readLine();
+        System.out.println("Thanks for the name, " + userName);
+------------------------------------------------------
