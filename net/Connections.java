@@ -4,3 +4,5 @@ http://stackoverflow.com/questions/3920419/difference-between-urlconnection-http
 
 http://stackoverflow.com/questions/1485708/how-do-i-do-a-http-get-in-java
 http://www.mkyong.com/java/how-to-send-http-request-getpost-in-java/
+
+https://docs.oracle.com/javase/tutorial/networking/urls/readingWriting.html
