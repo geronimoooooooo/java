@@ -1,0 +1,7 @@
+int numberofbodies = Integer.parseInt((String) xPath.evaluate("count(/html/body)", doc));
+if( numberofbodies==0) {
+    // body node missing}
+-----------------------------------------------------  
+check if node exist
+System.out.println("trueFalse: "+xPath.evaluate("boolean(/TSQ/TSATTR1)", doc, XPathConstants.NUMBER));
+-------------------------------------------------------
