@@ -1,3 +1,5 @@
+Gelesen/gestartet wird immer vom root Ordner.
+------------------------------
 String filePath ="resources/file.xml";
 			
 			File file = new File("resources/file.xml");
@@ -48,4 +50,35 @@ System.out.print("Enter your name: ");
         // to get whatever line the user types in:
         userName = bufferedReader.readLine();
         System.out.println("Thanks for the name, " + userName);
+-------------------------------------------------------------------
+ReadByteArray
+
+byte[] bytes = new byte[1024];
+//write data into byte array...
+
+InputStream input = new ByteArrayInputStream(bytes);
+
+//read first byte
+int data = input.read();
+while(data != -1) {
+    //do something with data
+
+    //read next byte
+    data = input.read();
+}
+-------------------------------------------------------------------
+readFileNamesInDirectory
+
+http://stackoverflow.com/questions/1844688/read-all-files-in-a-folder
+
+File folder = new File("your/path");
+File[] listOfFiles = folder.listFiles();
+
+    for (int i = 0; i < listOfFiles.length; i++) {
+      if (listOfFiles[i].isFile()) {
+        System.out.println("File " + listOfFiles[i].getName());
+      } else if (listOfFiles[i].isDirectory()) {
+        System.out.println("Directory " + listOfFiles[i].getName());
+      }
+    }
 -------------------------------------------------------------------
