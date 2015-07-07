@@ -22,4 +22,13 @@ InputStream input = Thread.currentThread().getContextClassLoader().getResourceAs
 		} 
 		
 -------------------------------------------------------
-
+BufferedReader br = new BufferedReader(new InputStreamReader(getServletContext().getResourceAsStream("/WEB-INF/resources/file.json")));
+		String text ="";
+		String currentLine ="";
+		StringBuilder sb = new StringBuilder();
+		while((currentLine=br.readLine())!=null){
+			sb.append(currentLine);
+		}
+		text = sb.toString();
+		System.out.println(text);
+-------------------------------------------------------
