@@ -55,7 +55,7 @@ Assuming that aFile.txt is in the root of your application, you should be able t
 
 <% java.io.InputStream in = application.getResourceAsStream("/aFile.txt"); %>
 -------------------------------------------------------
-Liest von jeder location.
+Liest nur wenn im classpath bei src/         /reasources/css.css
 BufferedReader br = new BufferedReader(new InputStreamReader(
 			Thread.currentThread().getContextClassLoader().getResourceAsStream("resources/css.css")));
 -------------------------------------------------------
