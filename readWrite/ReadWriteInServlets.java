@@ -1,7 +1,8 @@
 http://stackoverflow.com/questions/2308188/getresourceasstream-vs-fileinputstream
 
 getResourceAsStream is the right way to do it for web apps (as you already learned).
-getResourceAsStream() will load a file path relative from your application's classpath.
+getResourceAsStream() will load a file path relative from your application's classpath. 
+ALLES was sich schon im src/ befindet, kann einfach dann geladen werden.
 
 The reason is that reading from the file system cannot work if you package your web app in a WAR. 
 This is the proper way to package a web app. 
