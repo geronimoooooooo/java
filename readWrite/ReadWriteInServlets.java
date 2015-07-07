@@ -32,3 +32,8 @@ BufferedReader br = new BufferedReader(new InputStreamReader(getServletContext()
 		text = sb.toString();
 		System.out.println(text);
 -------------------------------------------------------
+Assuming that aFile.txt is in the root of your application, you should be able to open the stream using the servlet context:
+
+<% java.io.InputStream in = application.getResourceAsStream("/aFile.txt"); %>
+-------------------------------------------------------
+
