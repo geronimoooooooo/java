@@ -55,7 +55,14 @@ Assuming that aFile.txt is in the root of your application, you should be able t
 
 <% java.io.InputStream in = application.getResourceAsStream("/aFile.txt"); %>
 -------------------------------------------------------
+Liest von jeder location.
+BufferedReader br = new BufferedReader(new InputStreamReader(
+			Thread.currentThread().getContextClassLoader().getResourceAsStream("resources/css.css")));
+-------------------------------------------------------
 json_beacon.json muss sich im gleichen Ordner wie das Servlet befinden.
 
 BufferedReader br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("json_beacon.json")));
+-------------------------------------------------------
+muss im /WEB-INF/ sein
+BufferedReader br = new BufferedReader(new InputStreamReader(getServletContext().getResourceAsStream("/WEB-INF/resources/file.json")));
 -------------------------------------------------------
