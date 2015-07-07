@@ -1,3 +1,4 @@
+http://stackoverflow.com/questions/2797162/getresourceasstream-is-always-returning-null; von Pascal Thivent lesen
 http://stackoverflow.com/questions/2308188/getresourceasstream-vs-fileinputstream
 
 getResourceAsStream is the right way to do it for web apps (as you already learned).
