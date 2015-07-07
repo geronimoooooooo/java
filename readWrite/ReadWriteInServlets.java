@@ -36,4 +36,7 @@ Assuming that aFile.txt is in the root of your application, you should be able t
 
 <% java.io.InputStream in = application.getResourceAsStream("/aFile.txt"); %>
 -------------------------------------------------------
+json_beacon.json muss sich im gleichen Ordner wie das Servlet befinden.
 
+BufferedReader br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("json_beacon.json")));
+-------------------------------------------------------
