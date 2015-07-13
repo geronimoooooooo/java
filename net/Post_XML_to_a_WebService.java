@@ -12,7 +12,7 @@ public void sendPOST2Webservice(String urlService, String msg){
 		HttpURLConnection con = null;
 		
 		try {
-			URL url = new URL(urlService);	
+	URL url = new URL(urlService);
 			con = (HttpURLConnection)url.openConnection();
 			con.setDoOutput(true); //triggers POST
 			con.setDoInput(true);
@@ -26,13 +26,19 @@ public void sendPOST2Webservice(String urlService, String msg){
 			writer.flush();
 			writer.close();
 			
+			BufferedReader br = null;
+			if(con.getResponseCode()==200){
 			//get response from the web service
 			//InputStream is = con.getInputStream();
-			BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream()));
+				br = new BufferedReader(new InputStreamReader(con.getInputStream()));
+			}else{
+				br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
+			}
 			String response_txt ="";
 			String line ="";
 			StringBuilder strBuilder = new StringBuilder();
 				
+			System.out.println("Response body :"+con.getResponseCode());
 			while((line= br.readLine())!=null){
 					strBuilder.append(line);
 				}
@@ -42,6 +48,7 @@ public void sendPOST2Webservice(String urlService, String msg){
 			PrettyPrinter.prettyFormat(response_txt);
 			
 		} catch (Exception e) {
+			System.out.println(e.getMessage());
 		}finally{
 			System.out.println("this is finally in sendPOST2Webservice:");
 			if(writer!=null){
