@@ -27,7 +27,8 @@ public void sendPOST2Webservice(String urlService, String msg){
 			writer.close();
 			
 			BufferedReader br = null;
-			if(con.getResponseCode()==200){
+			//https://de.wikipedia.org/wiki/HTTP-Statuscode
+			if(con.getResponseCode()>=200 && con.getResponseCode()<204){
 			//get response from the web service
 			//InputStream is = con.getInputStream();
 				br = new BufferedReader(new InputStreamReader(con.getInputStream()));
