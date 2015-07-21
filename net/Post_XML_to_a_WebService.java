@@ -63,7 +63,14 @@ public void sendPOST2Webservice(String urlService, String msg){
 					con.disconnect();
 				}catch(Exception ex){
 				}
-			}	
+			}
+			if (bufferedReader != null) {
+        		try {
+                		bufferedReader.close();
+            		} catch (IOException ex) {
+                		throw ex;
+            		}
+        }
 		}
 	}
 -----------------------------------
