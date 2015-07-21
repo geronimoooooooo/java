@@ -15,3 +15,25 @@ String description_Value=jobj.get("content").getAsJsonObject().get("description"
 	}	
 }
 ----------------------------------------------------------------------------------------------
+{
+     "waypoints" : {
+              "ship": { 
+             "first_type": [[0,0],[5,7],[2,8],[4,4],[10,10],[12,0],[0,12],[12,8],[8,8]]                          
+             },
+              "boat": { 
+                       "first_type": [[0,0],[5,7],[2,8],[4,4],[10,10],[12,0],[0,12],[12,8],[8,8]]                            
+                       }
+              }
+   }
+JsonArray types = map_json
+    .getAsJsonObject("waypoints")
+    .getAsJsonObject("ship")
+    .getAsJsonArray("first_type";
+
+for(final JsonElement type : types) {
+    final JsonArray coords = type.getAsJsonArray():
+}
+----------------------------------------------------------------------------------------------
+List<MyModel> myModelList = gson.fromJson(jsonArray.toString(), listType);
+----------------------------------------------------------------------------------------------
+  
