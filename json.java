@@ -15,7 +15,7 @@ http://www.javacreed.com/simple-gson-example/
 		String xyz= jobj.get("content").getAsJsonObject().get("observedProperties").getAsJsonArray().get(0).getAsJsonObject().get("observedPropertyName").getAsString();
 		
 		ObservedProperty ob =new Gson().fromJson(jobj.get("content").getAsJsonObject().get("observedProperties").getAsJsonArray().get(1), ObservedProperty.class);
- 
+  
 {
 	"id": "Fellbachquelle",
 	"content":{
