@@ -16,7 +16,7 @@ http://www.javacreed.com/simple-gson-example/
 		
 		ObservedProperty ob =new Gson().fromJson(jobj.get("content").getAsJsonObject().get("observedProperties").getAsJsonArray().get(1), ObservedProperty.class);
 
-  
+    
 {
 	"id": "Fellbachquelle",
 	"content":{
@@ -38,29 +38,6 @@ http://www.javacreed.com/simple-gson-example/
 		]
 	}	
 }
-package tstp;
-
-import com.google.gson.annotations.SerializedName;
-
-/**
- * This class is used to store data regarding ObservedProperties.
- *
- */
-public class ObservedProperty {
-	
-	public String observedPropertyName;
-	public String name = "";
-	public String name_href = "";
-	public String quantityDefinition_nameURL = "";
-	public String uom_code = "";
-	public String uom_href = "";
-	@SerializedName("uomTitle")
-	public String uom_title = "";
-	public String quality_href = "";
-	public String quality_text_value = "";
-	
-}
-
 ----------------------------------------------------------------------------------------------
 {
      "waypoints" : {
