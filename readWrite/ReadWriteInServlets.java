@@ -70,3 +70,8 @@ BufferedReader br = new BufferedReader(new InputStreamReader(getServletContext()
 -------------------------------------------------------
 Der Befehl: this.getClass().getClassLoader().getResource("").getPath();
 liefert folgenden Pfad: C:\java_workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\sensoriqs\WEB-INF\classes\
+-------------------------------------------------------
+	String path = getServletContext().getRealPath("");
+	//liefert, wenn im Tomcat läuft
+	//C:\Program Files\Apache Software Foundation\Tomcat 8.0\webapps\sensoriqs\
+-------------------------------------------------------
