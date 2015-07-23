@@ -68,3 +68,5 @@ BufferedReader br = new BufferedReader(new InputStreamReader(getClass().getResou
 muss im /WEB-INF/ sein
 BufferedReader br = new BufferedReader(new InputStreamReader(getServletContext().getResourceAsStream("/WEB-INF/resources/file.json")));
 -------------------------------------------------------
+Der Befehl: this.getClass().getClassLoader().getResource("").getPath();
+liefert folgenden Pfad: C:\java_workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\sensoriqs\WEB-INF\classes\
