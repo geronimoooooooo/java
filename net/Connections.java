@@ -1,3 +1,7 @@
+Ein ausführliches "tutorial" mit examples auf Stackoverflow bezüglich UrlConnection.
+* cookies/session, streaming, certificates
+http://stackoverflow.com/questions/2793150/using-java-net-urlconnection-to-fire-and-handle-http-requests
+
 Difference between URLConnection, HttpURLConnection and HttpsURLConnection
 http://stackoverflow.com/questions/3920419/difference-between-urlconnection-httpurlconnection-and-httpsurlconnection
 
