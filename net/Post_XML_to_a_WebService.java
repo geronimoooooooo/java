@@ -14,9 +14,9 @@ public void sendPOST2Webservice(String urlService, String msg){
 		try {
 	URL url = new URL(urlService);
 			con = (HttpURLConnection)url.openConnection();
-			con.setDoOutput(true); //triggers POST
+			con.setDoOutput(true); //triggers POST; sets implicitly to POST
 			con.setDoInput(true);
-			con.setRequestMethod("POST");
+			//con.setRequestMethod("POST");
 			con.setRequestProperty("accept-charset", charset);
 			con.setRequestProperty("Content-Type", "application/soap+xml");
 			//("Content-Type", "application/x-www-form-urlencoded;charset=" + charset);
