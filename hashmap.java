@@ -15,6 +15,10 @@ for (Map.Entry<String, JButton> entry : listbouton.entrySet())
   this.add(value);
 }
 ---------------------------------------------------------------------------------
+for (Entry<String, List<String>> header : connection.getHeaderFields().entrySet()) {
+    System.out.println(header.getKey() + "=" + header.getValue());
+}
+---------------------------------------------------------------------------------
 10 Examples:
 http://java67.blogspot.co.at/2013/02/10-examples-of-hashmap-in-java-programming-tutorial.html
 ---------------------------------------------------------------------------------
