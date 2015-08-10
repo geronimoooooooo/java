@@ -34,6 +34,8 @@ public void sendPOST2Webservice(String urlService, String msg){
 			//get response from the web service
 			//InputStream is = con.getInputStream();
 				br = new BufferedReader(new InputStreamReader(con.getInputStream()));
+				//used to see the serverside specified content-type
+				//String contentType = connection.getHeaderField("Content-Type");
 			}else{
 				br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
 			}
