@@ -19,6 +19,7 @@ public void sendPOST2Webservice(String urlService, String msg){
 			con.setRequestMethod("POST");
 			con.setRequestProperty("accept-charset", charset);
 			con.setRequestProperty("Content-Type", "application/soap+xml");
+			//("Content-Type", "application/x-www-form-urlencoded;charset=" + charset);
 			
 						
 			writer = new OutputStreamWriter(con.getOutputStream());
