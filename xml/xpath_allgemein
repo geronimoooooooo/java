@@ -5,3 +5,4 @@ if( numberofbodies==0) {
 check if node exist
 System.out.println("trueFalse: "+xPath.evaluate("boolean(/TSQ/TSATTR1)", doc, XPathConstants.NUMBER));
 -------------------------------------------------------
+XPath : Get nodes where child node contains an attribute: http://stackoverflow.com/questions/1457638/xpath-get-nodes-where-child-node-contains-an-attribute
