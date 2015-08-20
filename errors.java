@@ -26,3 +26,7 @@ Content is not allowed in Prolog.
 
 Einfach mal die ersten paar Zeichen löschen und neu schreiben. Dann sollte gehen.
 --------------------------------
+
+Tomcat:
+Server Tomcat v8.0 Server at localhost failed to start.
+Da ist ein fehler in der web.xml. Ein / könnte irgendwo fehlen.
