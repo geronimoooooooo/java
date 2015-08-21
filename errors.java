@@ -3,6 +3,8 @@ http://www.tutorialspoint.com/servlets/servlets-exception-handling.htm
 http://www.jguru.com/faq/view.jsp?EID=1347
 http://www.jsptutorial.org/content/errorHandling
 
+request.getAttribute("javax.servlet.error.servlet_name");
+Errorcodes: https://tomcat.apache.org/tomcat-7.0-doc/servletapi/constant-values.html
 -------------------------------
 SOS
 -------------------------------
