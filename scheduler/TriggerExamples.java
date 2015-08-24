@@ -7,27 +7,38 @@ CronTrigger trigger = newTrigger()
 --------------------------------------------
 ALLE Möglichen Examples bezüglich Zeit: http://www.quartz-scheduler.org/documentation/quartz-2.x/examples/Example3
 --------------------------------------------
-		JobDetail job = JobBuilder.newJob(JobDescription.class).withIdentity(singleName, grpName).build();
-		
-		SimpleScheduleBuilder ssb = SimpleScheduleBuilder.simpleSchedule();
-		ssb.withIntervalInSeconds(time).withRepeatCount(5);
-		
-		Trigger trigger = TriggerBuilder
-				.newTrigger()
-				.startNow()				
-				.withIdentity(singleName, grpName)
-				.withSchedule(
-						ssb
-					).build();
+	JobDetail job = JobBuilder.newJob(JobDescription.class).withIdentity(singleName, grpName).build();
+	
+	SimpleScheduleBuilder ssb = SimpleScheduleBuilder.simpleSchedule();
+	ssb.withIntervalInSeconds(time).withRepeatCount(5);
+	
+	Trigger trigger = TriggerBuilder
+		.newTrigger()
+		.startNow()				
+		.withIdentity(singleName, grpName)
+		.withSchedule(
+			ssb
+		).build();
 --------------------------------------------
 
-		JobDetail job = JobBuilder.newJob(JobDescription.class).withIdentity(singleName, grpName).build();
-		
-		Trigger trigger = TriggerBuilder
-				.newTrigger()
-				.startNow()
-				.withIdentity(singleName, grpName)
-				.withSchedule(
-					SimpleScheduleBuilder.simpleSchedule()
-					.withIntervalInSeconds(time).repeatForever()).build();
+	JobDetail job = JobBuilder.newJob(JobDescription.class).withIdentity(singleName, grpName).build();
+	
+	Trigger trigger = TriggerBuilder
+		.newTrigger()
+		.startNow()
+		.withIdentity(singleName, grpName)
+			.withSchedule(
+			SimpleScheduleBuilder.simpleSchedule()
+			.withIntervalInSeconds(time).repeatForever()).build();
 -----------------------------------------------
+	Trigger trigger = TriggerBuilder
+		.newTrigger()
+		.startNow()
+		.withIdentity(singleName, grpName)
+		.withSchedule(
+			SimpleScheduleBuilder.simpleSchedule()
+			.withIntervalInSeconds(5).withRepeatCount(4))
+			.build();			
+-----------------------------------------------
+
+
