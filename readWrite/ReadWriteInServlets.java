@@ -75,3 +75,9 @@ liefert folgenden Pfad: C:\java_workspace\.metadata\.plugins\org.eclipse.wst.ser
 	//liefert, wenn im Tomcat läuft
 	//C:\Program Files\Apache Software Foundation\Tomcat 8.0\webapps\sensoriqs\
 -------------------------------------------------------
+Wenn man aus dem WEB-INF lesen will:
+BufferedReader br = new BufferedReader(new InputStreamReader(getServletContext().getResourceAsStream("/WEB-INF/resources/file.json")));
+
+WENN MAN AUS DEM RESOURCES ORDNER LESEN WILL:
+BufferedReader br = new BufferedReader(new InputStreamReader(Thread.currentThread().getContextClassLoader().getResourceAsStream("resources/css.css")));
+-------------------------------------------------------
