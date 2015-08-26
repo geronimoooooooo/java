@@ -81,3 +81,9 @@ BufferedReader br = new BufferedReader(new InputStreamReader(getServletContext()
 WENN MAN AUS DEM RESOURCES ORDNER LESEN WILL:
 BufferedReader br = new BufferedReader(new InputStreamReader(Thread.currentThread().getContextClassLoader().getResourceAsStream("resources/css.css")));
 -------------------------------------------------------
+TextUtility.classLoaderPath = this.getClass().getClassLoader().getResource("").getPath();
+TextUtility.print("SendGetZeitreihenHandler Pfad: "+this.getClass().getClassLoader().getResource("").getPath());
+
+ERGEBNIS: SendGetZeitreihenHandler Pfad: 
+/C:/java_workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp2/wtpwebapps/sensoriqs/WEB-INF/classes/
+-------------------------------------------------------
