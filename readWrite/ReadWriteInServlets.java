@@ -87,3 +87,8 @@ TextUtility.print("SendGetZeitreihenHandler Pfad: "+this.getClass().getClassLoad
 ERGEBNIS: SendGetZeitreihenHandler Pfad: 
 /C:/java_workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp2/wtpwebapps/sensoriqs/WEB-INF/classes/
 -------------------------------------------------------
+in doGet:
+TextFiles.classLoaderPath = this.getClass().getClassLoader().getResource("").getPath();
+out.println("this is doGet from getZeitreihen." + TextFiles.classLoaderPath );
+Ergebnis: this is doGet from getZeitreihen./C:/tomcat/webapps/tstp2sos/WEB-INF/classes/
+-------------------------------------------------------
