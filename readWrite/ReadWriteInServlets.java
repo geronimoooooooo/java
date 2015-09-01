@@ -92,3 +92,8 @@ TextFiles.classLoaderPath = this.getClass().getClassLoader().getResource("").get
 out.println("this is doGet from getZeitreihen." + TextFiles.classLoaderPath );
 Ergebnis: this is doGet from getZeitreihen./C:/tomcat/webapps/tstp2sos/WEB-INF/classes/
 -------------------------------------------------------
+public static String setClassLoaderPath(){
+	classLoaderPath = TextFiles.class.getClassLoader().getResource("").getPath();
+	return classLoaderPath; 
+	///C:/tomcat/webapps/tstp2sos/WEB-INF/classes/
+}
