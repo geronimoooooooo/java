@@ -97,3 +97,11 @@ public static String setClassLoaderPath(){
 	return classLoaderPath; 
 	///C:/tomcat/webapps/tstp2sos/WEB-INF/classes/
 }
+-------------------------------------------------------
+in index.jsp
+String path = session.getServletContext().getRealPath("/resources");
+System.out.println("From index.jsp: "+path); 
+InputStream input = Thread.currentThread().getContextClassLoader().getResourceAsStream("resources/zeitreihen_ort.txt");
+out.print(path);
+//C:\java_workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\tstp2sos\resources
+-------------------------------------------------------
