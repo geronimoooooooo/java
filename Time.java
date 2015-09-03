@@ -77,3 +77,7 @@ System.out.println("execute() : "+ DateTimeHelper.date2String_T_Z_Format(datePas
 Date today = new Date();
 Date tomorrow = new Date(today.getTime() + (1000 * 60 * 60 * 24));
 ---------------------------------------------------------------
+Date date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").parse("2012-05-20T09:00:00.000Z");
+---------------------------------------------------------------
+---------------------------------------------------------------
+---------------------------------------------------------------
