@@ -54,3 +54,14 @@ DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
 		Date date = new Date();
 		System.out.println(dateFormat.format(date)); //2015-08-14T11:22:46:131Z  use :SSS for ms
 		//time_value=dateFormat.format(date);
+---------------------------------------------------------------
+show actual time in jsp
+<%@page import="utility.DateTimeHelper"%>
+<%@page import="java.util.Date"%>
+
+<%
+Date date = new Date();
+String currentDate = DateTimeHelper.date2String_T_Z_Format(date);
+%>
+<input id="_endDate" type="text" name="_endDate" size="65" placeholder="provide a end date" value="<%= currentDate %>"   />    </td>
+---------------------------------------------------------------
