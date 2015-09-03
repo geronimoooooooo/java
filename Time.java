@@ -65,3 +65,8 @@ String currentDate = DateTimeHelper.date2String_T_Z_Format(date);
 %>
 <input id="_endDate" type="text" name="_endDate" size="65" placeholder="provide a end date" value="<%= currentDate %>"   />    </td>
 ---------------------------------------------------------------
+Date dateNow = new Date();
+System.out.println("execute() nowTime: "+ DateTimeHelper.date2String_T_Z_Format(dateNow));
+Date datePast = new Date(dateNow.getTime()-(1000*60*sdio.timeRepeatInterval)); //ms * seconds * minutes
+System.out.println("execute() : "+ DateTimeHelper.date2String_T_Z_Format(datePast));
+---------------------------------------------------------------
