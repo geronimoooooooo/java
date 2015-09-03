@@ -105,3 +105,16 @@ InputStream input = Thread.currentThread().getContextClassLoader().getResourceAs
 out.print(path);
 //C:\java_workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\tstp2sos\resources
 -------------------------------------------------------
+ Wenn man hier mit Servlet etwas rauslesen möchte: src/main/webapp/pdf/
++ Use the absolute path (this is appropriate, if you store the PDF outside of your webapp)
++ Use getRealPath() (this should be suitable for your use case; PDFs are part of webapp):
+	
+	File pdfFolder =  new File(req.getSession().getServletContext().getRealPath("/pdf"));
+-------------------------------------------------------
+-------------------------------------------------------
+-------------------------------------------------------
+-------------------------------------------------------
+-------------------------------------------------------
+-------------------------------------------------------
+-------------------------------------------------------
+-------------------------------------------------------
