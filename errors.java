@@ -20,6 +20,7 @@ Document document = dbuilder.parse(xml_org);
 java.net.MalformedURLException: no protocol:
 --------------------------------
 Wenn man versucht einen leeren xmlString zu  Document document = dbuilder.parse(xml_org);
+Auch wenn man einen Stream irgendwo nutzen möchte und dieser aber schon genutzt wurde.
 
 [Fatal Error] :1:1: Vorzeitiges Dateiende.
 org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Vorzeitiges Dateiende.
