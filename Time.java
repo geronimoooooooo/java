@@ -45,6 +45,10 @@ public String getCurrentTimeStamp() {
     return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date());
 }
 ---------------------------------------------------------------
+long startTime = System.nanoTime;
+long endTime = System.nanoTime() - startTime;
+System.out.println("elapsed time:" + endTime / 1000000);
+---------------------------------------------------------------
 DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
 		Date date = new Date();
 		System.out.println(dateFormat.format(date)); //2015-08-14T11:22:46:131Z  use :SSS for ms
@@ -69,4 +73,7 @@ Date dateNow = new Date();
 System.out.println("execute() nowTime: "+ DateTimeHelper.date2String_T_Z_Format(dateNow));
 Date datePast = new Date(dateNow.getTime()-(1000*60*sdio.timeRepeatInterval)); //ms * seconds * minutes
 System.out.println("execute() : "+ DateTimeHelper.date2String_T_Z_Format(datePast));
+---------------------------------------------------------------
+Date today = new Date();
+Date tomorrow = new Date(today.getTime() + (1000 * 60 * 60 * 24));
 ---------------------------------------------------------------
