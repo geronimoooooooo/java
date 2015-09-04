@@ -13,19 +13,9 @@ xmlns:ser="http://services.web.post.list.com">
 </soapenv:Envelope>
 
 
-import java.io.StringReader;
-import java.util.Iterator;
 
-import javax.xml.namespace.NamespaceContext;
-import javax.xml.parsers.*;
-import javax.xml.xpath.*;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
 
 public class Tester {
-
     public static void main(String[] args) throws Exception {
         String xml = "<soapenv:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:a=\"http://fu\" xmlns:ser=\"http://services.web.post.list.com\"><soapenv:Header><authInfo xsi:type=\"soap:authentication\" xmlns:soap=\"http://list.com/services/SoapRequestProcessor\"><!--You may enter the following 2 items in any order--><username xsi:type=\"xsd:string\">dfasf@google.com</username><password xsi:type=\"xsd:string\">PfasdfRem91</password> <a:test>hi</a:test></authInfo></soapenv:Header></soapenv:Envelope>";
         System.out.println(xml);
@@ -40,12 +30,10 @@ public class Tester {
             public Iterator getPrefixes(String arg0) {
                 return null;
             }
-
             @Override
             public String getPrefix(String arg0) {
                 return null;
             }
-
             @Override
             public String getNamespaceURI(String arg0) {
                 if("soapenv".equals(arg0)) {
@@ -74,6 +62,18 @@ public class Tester {
         } catch (Exception E) {
             System.out.println(E);
         }
-
     }
 }
+------------------------------------------------------------------------
+String path_offering = "/soap:Envelope/soap:Body/sos:Capabilities/@version";
+	Node node_offering = (Node)xPath.compile(path_offering).evaluate(doc, XPathConstants.NODE);
+	System.out.println("offering: "+node_offering.getTextContent());
+--------------------------------------------------------------------------------
+	String path_procedures = "//ows:Operation[@name='GetObservation']/ows:Parameter[@name='procedure']/ows:AllowedValues/ows:Value";
+	NodeList node_procedures = (NodeList)xPath.compile(path_procedures).evaluate(doc, XPathConstants.NODESET);
+		for(int n = 0; n<node_procedures.getLength(); n++){
+			System.out.println("parser:"+node_procedures.item(n).getTextContent());
+			}	
+--------------------------------------------------------------------------
+	        String responseStatus = xpath.evaluate("//*[local-name()='Value']/text()", doc);
+	        System.out.println("-> " + responseStatus);
