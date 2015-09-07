@@ -111,6 +111,11 @@ out.print(path);
 	
 	File pdfFolder =  new File(req.getSession().getServletContext().getRealPath("/pdf"));
 -------------------------------------------------------
+read string to BufferedReader
+String s= ...; // your String
+StringReader sr= new StringReader(s); // wrap your String
+BufferedReader br= new BufferedReader(sr); // wrap your StringReader
+
 -------------------------------------------------------
 -------------------------------------------------------
 -------------------------------------------------------
