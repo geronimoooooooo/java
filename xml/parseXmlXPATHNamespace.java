@@ -81,6 +81,7 @@ String path_offering = "/soap:Envelope/soap:Body/sos:Capabilities/@version";
 get the first book, that has an attribute location='US'
 (/bookstore/book[@location='US'])[1]
 --------------------------------------------------------------------------
+InputStream stream = new ByteArrayInputStream("someString".getBytes(StandardCharsets.UTF_8));
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
