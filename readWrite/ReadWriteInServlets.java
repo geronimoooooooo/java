@@ -117,6 +117,9 @@ StringReader sr= new StringReader(s); // wrap your String
 BufferedReader br= new BufferedReader(sr); // wrap your StringReader
 
 -------------------------------------------------------
+garantieren, dass der String msg auch wirklich UTF-8 ist
+byte [] bray = msg.getBytes("UTF-8");
+msg = new String(bray);
 -------------------------------------------------------
 -------------------------------------------------------
 -------------------------------------------------------
