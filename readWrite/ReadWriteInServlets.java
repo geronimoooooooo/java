@@ -127,6 +127,8 @@ msg = new String(bray);
 byte ptext[] = myString.getBytes("ISO-8859-1"); 
 String value = new String(ptext, "UTF-8"); 
 -------------------------------------------------------
+InputStream is = getServletContext().getResourceAsStream("/WEB-INF/DataSpecification.owl");
+Reader in = new BufferedReader(new InputStreamReader(is, "UTF-8"));
 -------------------------------------------------------
 -------------------------------------------------------
 -------------------------------------------------------
