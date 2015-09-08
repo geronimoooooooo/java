@@ -121,7 +121,11 @@ garantieren, dass der String msg auch wirklich UTF-8 ist
 byte [] bray = msg.getBytes("UTF-8");
 msg = new String(bray);
 -------------------------------------------------------
+ String inputText = "some text with escaped chars"
+ InputStream is = new ByteArrayInputStream(inputText.getBytes("UTF-8"));
 -------------------------------------------------------
+byte ptext[] = myString.getBytes("ISO-8859-1"); 
+String value = new String(ptext, "UTF-8"); 
 -------------------------------------------------------
 -------------------------------------------------------
 -------------------------------------------------------
