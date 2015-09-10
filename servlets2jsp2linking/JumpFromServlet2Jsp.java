@@ -51,3 +51,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
     <url-pattern>/is</url-pattern>
   </servlet-mapping>
   -------------------------------------------------------------------------------------------
+<td><input type="button" name="edit" value="Edit" onclick="location.href='edit.jsp?id=<%=rs.getString(1)%>'; "></td>
+
+<td><input type="button" name="delete" value="Delete" onclick="location.href='/Registrationform/DeleteServlet?id=<%=rs.getString(1)%>'; "></td>
+-------------------------------------------------------------------------------------------
