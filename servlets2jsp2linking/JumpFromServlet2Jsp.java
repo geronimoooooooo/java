@@ -27,3 +27,18 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
         RequestDispatcher rd = getServletContext().getRequestDispatcher("/index.jsp");
         rd.forward(request, response);
 	}
+-------------------------------------------------------------------------------------------
+	String url2SosDefault = TextFiles.read1SimpleJsonValue("web_app_config.json", "url2sos_default");
+ 	String executeInsertObservationServicesOnStartUp = TextFiles.read1SimpleJsonValue("web_app_config.json", "executeInsertObservationServicesOnStartUp");	         
+	         
+	request.setAttribute("url2SosDefault", url2SosDefault);
+ 	//in .jsp value="${executeInsertObservationServicesOnStartUp}"
+        request.setAttribute("executeInsertObservationServicesOnStartUp", executeInsertObservationServicesOnStartUp);
+        
+        RequestDispatcher rd = getServletContext().getRequestDispatcher("/configuration.jsp");
+        rd.forward(request, response);	
+        
+        <input id="_loadIOServices" type="text" name="_loadIOServices" size="65" placeholder="provide a url for GetCapabilities" 
+    value="${executeInsertObservationServicesOnStartUp}"  />
+
+-------------------------------------------------------------------------------------------
