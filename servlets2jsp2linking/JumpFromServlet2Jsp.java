@@ -42,3 +42,12 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
     value="${executeInsertObservationServicesOnStartUp}"  />
 
 -------------------------------------------------------------------------------------------
+  <servlet>
+    <servlet-name>is</servlet-name>
+    <jsp-file>/insert-sensor.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>is</servlet-name>
+    <url-pattern>/is</url-pattern>
+  </servlet-mapping>
+  -------------------------------------------------------------------------------------------
