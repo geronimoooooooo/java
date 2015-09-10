@@ -1,0 +1,28 @@
+public ArrayList<String> _showAllJobs() {
+		Scheduler scheduler;
+		ArrayList<String> list_grpJobName = new ArrayList<String>();
+		try {
+			scheduler = new StdSchedulerFactory().getScheduler();
+			for (String groupName : scheduler.getJobGroupNames()) {
+				for (JobKey jobKey : scheduler.getJobKeys(GroupMatcher.jobGroupEquals(groupName))) {
+
+				String jobName = jobKey.getName();
+				String jobGroup = jobKey.getGroup();
+				list_grpJobName.add(jobName+"_"+jobGroup);
+
+				// get job's trigger
+				ArrayList<Trigger> triggers = (ArrayList<Trigger>) scheduler.getTriggersOfJob(jobKey);
+				Date nextFireTime = triggers.get(0).getNextFireTime();//Wed Sep 02 14:17:35 CEST 2015
+				SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+				String finalDate =format.format(nextFireTime);
+
+				System.out.println("[jobName] : " + jobName
+							+ " [groupName] : " + jobGroup + " - "
+							+ finalDate);
+				}
+			}
+		} catch (SchedulerException e) {
+			e.printStackTrace();
+		}
+		return list_grpJobName;
+	}
