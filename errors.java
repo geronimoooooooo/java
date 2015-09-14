@@ -33,3 +33,7 @@ Einfach mal die ersten paar Zeichen löschen und neu schreiben. Dann sollte gehe
 Tomcat:
 Server Tomcat v8.0 Server at localhost failed to start.
 Da ist ein fehler in der web.xml. Ein / könnte irgendwo fehlen.
+-------------------------------------
+Abfrage zum SOS/Adresse hingeschickt, aber bei der Adresse gibt es gar keinen service
+[Fatal Error] :1:966: Elementtyp "HR" muss mit dem entsprechenden Endtag "</HR>" beendet werden.
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 966; Elementtyp "HR" muss mit dem entsprechenden Endtag "</HR>" beendet werden.
