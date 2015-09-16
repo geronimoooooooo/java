@@ -2,6 +2,20 @@ http://stackoverflow.com/questions/16377754/parse-json-file-using-gson
 http://stackoverflow.com/questions/20152710/gson-get-json-value-from-string
 http://www.javacreed.com/simple-gson-example/
 
+String jsonText ="";
+	Gson gson = new Gson();
+	JsonObject jobj = new JsonObject();
+	
+	try{
+		jobj.addProperty("url2sos", sdio.url2Sos);
+		jobj.addProperty("ort", sdio.getTsattr().getOrt());
+		jobj.addProperty("quality", sdio.getQuailty());
+		
+		jsonText= jobj.toString();
+	}catch(Exception ex){
+		ex.printStackTrace();
+	}
+--------------------------------------------------------------------------------------
 		Gson gson = new Gson();
 		JsonObject jobj = gson.fromJson(jsonText, JsonObject.class);
 					
