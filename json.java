@@ -82,3 +82,11 @@ List<MyModel> myModelList = gson.fromJson(jsonArray.toString(), listType);
 ----------------------------------------------------------------------------------------------
 double result = jobj.get("test").getAsDouble();
 ----------------------------------------------------------------------------------------------
+PRETTYPRINTING!!!!
+jsonText = TextFiles.readTextFileWithServletsAsStream_UTF8("insert_observation_services/"+s);
+	Gson gson = new GsonBuilder().setPrettyPrinting().create();
+	JsonParser jp = new JsonParser();
+	JsonElement je = jp.parse(jsonText);
+	String prettyJsonString = gson.toJson(je);
+	System.out.println(prettyJsonString);
+----------------------------------------------------------------------------------------------
