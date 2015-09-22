@@ -32,6 +32,10 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 	RequestDispatcher rd = getServletContext().getRequestDispatcher("/services");
 	rd.forward(request, response);
 -------------------------------------------------------------------------------------------	    
+	String redirectURL = "http://examples.javacodegeeks.com/";
+        response.sendRedirect(redirectURL);
+-------------------------------------------------------------------------------------------	    
+
 	String url2SosDefault = TextFiles.read1SimpleJsonValue("web_app_config.json", "url2sos_default");
  	String executeInsertObservationServicesOnStartUp = TextFiles.read1SimpleJsonValue("web_app_config.json", "executeInsertObservationServicesOnStartUp");	         
 	         
