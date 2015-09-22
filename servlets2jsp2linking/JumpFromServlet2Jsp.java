@@ -28,6 +28,10 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
         rd.forward(request, response);
 	}
 -------------------------------------------------------------------------------------------
+	Call another servlet
+	RequestDispatcher rd = getServletContext().getRequestDispatcher("/services");
+	rd.forward(request, response);
+-------------------------------------------------------------------------------------------	    
 	String url2SosDefault = TextFiles.read1SimpleJsonValue("web_app_config.json", "url2sos_default");
  	String executeInsertObservationServicesOnStartUp = TextFiles.read1SimpleJsonValue("web_app_config.json", "executeInsertObservationServicesOnStartUp");	         
 	         
