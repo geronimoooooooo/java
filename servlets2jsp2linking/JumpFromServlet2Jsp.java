@@ -34,6 +34,8 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 -------------------------------------------------------------------------------------------	    
 	String redirectURL = "http://examples.javacodegeeks.com/";
         response.sendRedirect(redirectURL);
+      	String redirectURL = "/tstp2sos/services";
+          response.sendRedirect(redirectURL);
 -------------------------------------------------------------------------------------------	    
 
 	String url2SosDefault = TextFiles.read1SimpleJsonValue("web_app_config.json", "url2sos_default");
