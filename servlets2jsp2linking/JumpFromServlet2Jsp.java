@@ -27,6 +27,8 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
         RequestDispatcher rd = getServletContext().getRequestDispatcher("/index.jsp");
         rd.forward(request, response);
 	}
+-------------------------------------------------------------------------------------------	
+	<meta http-equiv="refresh" content="1; url=/next/page/to/go/to.jsp">
 -------------------------------------------------------------------------------------------
 	Call another servlet
 	RequestDispatcher rd = getServletContext().getRequestDispatcher("/services");
