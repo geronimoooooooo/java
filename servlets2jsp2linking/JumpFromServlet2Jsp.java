@@ -29,7 +29,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 	}
 -------------------------------------------------------------------------------------------
 	Wenn man nach 3 Sekunden einen redirect von einer JSP Seite haben möchte:
-	<meta http-equiv="refresh" content="3; url=/next/page/to/go/to.jsp">
+	 <meta http-equiv="refresh" content="3; url=/tstp2sos/index.jsp">
 -------------------------------------------------------------------------------------------
 	From Servlet:
 	RequestDispatcher rd = getServletContext().getRequestDispatcher("/services");
