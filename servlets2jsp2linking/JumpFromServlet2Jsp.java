@@ -27,8 +27,16 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
         RequestDispatcher rd = getServletContext().getRequestDispatcher("/index.jsp");
         rd.forward(request, response);
 	}
--------------------------------------------------------------------------------------------	
-	<meta http-equiv="refresh" content="1; url=/next/page/to/go/to.jsp">
+-------------------------------------------------------------------------------------------
+	Wenn man nach 3 Sekunden einen redirect von einer JSP Seite haben möchte:
+	<meta http-equiv="refresh" content="3; url=/next/page/to/go/to.jsp">
+-------------------------------------------------------------------------------------------
+	From Servlet:
+	RequestDispatcher rd = getServletContext().getRequestDispatcher("/services");
+	rd.forward(request, response);
+	      String redirectURL = "/tstp2sos/services";
+	      String redirectURL = "/tstp2sos/ok.jsp";
+          response.sendRedirect(redirectURL);
 -------------------------------------------------------------------------------------------
 	Call another servlet
 	RequestDispatcher rd = getServletContext().getRequestDispatcher("/services");
