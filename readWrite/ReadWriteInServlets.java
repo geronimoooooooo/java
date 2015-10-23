@@ -130,5 +130,8 @@ String value = new String(ptext, "UTF-8");
 InputStream is = getServletContext().getResourceAsStream("/WEB-INF/DataSpecification.owl");
 Reader in = new BufferedReader(new InputStreamReader(is, "UTF-8"));
 -------------------------------------------------------
+StreamResult result3 = new StreamResult(new File("insertObservationTest111.xml"));
+StreamResult result2File = new StreamResult(new File("C:\\java_workspace\\soscon\\WebContent\\WEB-INF\\resources\\file11.xml"));
+StreamResult result2File2 = new StreamResult(new File("C:\\java_workspace\\sensoriqs\\src\\resources\\file21.xml")); 
 -------------------------------------------------------
 -------------------------------------------------------
