@@ -16,6 +16,15 @@ String jsonText ="";
 		ex.printStackTrace();
 	}
 --------------------------------------------------------------------------------------
+	public static String read1SimpleJsonValue(String path2File, String key){
+		String jsonText = readTextFileWithServletsAsStream_UTF8(path2File);
+		Gson gson = new Gson();
+		JsonObject jobj = gson.fromJson(jsonText, JsonObject.class);
+		System.out.println(jsonText);
+		System.out.println(jobj.get(key).getAsString());
+		return jobj.get(key).getAsString();
+	}
+--------------------------------------------------------------------------------------
 		Gson gson = new Gson();
 		JsonObject jobj = gson.fromJson(jsonText, JsonObject.class);
 					
