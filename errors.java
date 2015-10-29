@@ -37,3 +37,35 @@ Da ist ein fehler in der web.xml. Ein / könnte irgendwo fehlen.
 Abfrage zum SOS/Adresse hingeschickt, aber bei der Adresse gibt es gar keinen service
 [Fatal Error] :1:966: Elementtyp "HR" muss mit dem entsprechenden Endtag "</HR>" beendet werden.
 org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 966; Elementtyp "HR" muss mit dem entsprechenden Endtag "</HR>" beendet werden.
+
+#################################################################
+Bei Tomcat: Das Servlet/File gibt es nicht, welches im web.xml eingetragen wurde, dass beim StartUp des servers auch mit
+ausgeführt werden soll. Einfach den Namen der Datei dort richtig angeben.
+
+INFORMATION: Marking servlet LoadOnStartUp as unavailable
+Okt 29, 2015 12:09:04 PM org.apache.catalina.core.StandardContext loadOnStartup
+SCHWERWIEGEND: Servlet /tstp2sos threw load() exception
+java.lang.ClassNotFoundException: utility.LoadOnStartUp
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1702)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1547)
+
+  <servlet>
+    <servlet-name>LoadOnStartAppConfiguration</servlet-name>
+    <servlet-class>utility.LoadOnStartAppConfiguration</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+	#################################################################
+	
+	##########################
+	
+	##########################
+	
+	##############################################################################
+	
+	
+	
+	
+	##########################
+	##########################
+	##########################
+	##########################
