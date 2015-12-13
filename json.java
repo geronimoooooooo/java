@@ -112,4 +112,30 @@ jsonText = TextFiles.readTextFileWithServletsAsStream_UTF8("insert_observation_s
 	JsonElement je = jp.parse(jsonText);
 	String prettyJsonString = gson.toJson(je);
 	System.out.println(prettyJsonString);
+oder
+
+	String jsonText ="";	
+	String prettyJsonString ="";
+
+	Gson gson = new Gson();
+	JsonObject jobj = new JsonObject();
+		
+	try{
+		for (Entry<String, String[]> entry : map_ParameterFromForm.entrySet())
+	    {
+	        System.out.println(entry.getKey() + "  ---  " + entry.getValue()[0]);
+	        jobj.addProperty(entry.getKey(), entry.getValue()[0]);
+	    }			
+				
+		jsonText= jobj.toString();
+			
+		Gson gsonPretty = new GsonBuilder()
+			.setPrettyPrinting()
+			.disableHtmlEscaping()
+			.create();
+		
+		JsonParser jp = new JsonParser();
+		JsonElement je = jp.parse(jsonText);
+		prettyJsonString = gsonPretty.toJson(je);
+		System.out.println("TextFiles.writeJson2ConfigFile prettyJsonString: "+prettyJsonString);
 ----------------------------------------------------------------------------------------------
