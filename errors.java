@@ -30,7 +30,8 @@ Content is not allowed in Prolog.
 Einfach mal die ersten paar Zeichen löschen und neu schreiben. Dann sollte gehen.
 --------------------------------
 
-Tomcat:
+TOMCAT:
+--------------------------------
 Server Tomcat v8.0 Server at localhost failed to start.
 Da ist ein fehler in der web.xml. Ein / könnte irgendwo fehlen.
 -------------------------------------
@@ -55,7 +56,13 @@ java.lang.ClassNotFoundException: utility.LoadOnStartUp
     <load-on-startup>1</load-on-startup>
   </servlet>
 #################################################################
-	
+org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNUNG: The web application [tstp2sos] appears to have started a thread named [DefaultQuartzScheduler_Worker-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+
+http://stackoverflow.com/questions/3230324/quartz-scheduler-in-tomcat-6-thread-does-not-stop
+kann man scheduler.shutdown(true); nutzen?? Werden da dann nicht alle jobs gestoppt? Möchte ja nur einen spezifischen job/service stoppen.
 ##########################
 	
 ##########################
