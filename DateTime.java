@@ -34,6 +34,8 @@ Examples:
 "yyyy-MM-dd'T'HH:mm:ss.SSSXXX"   2001-07-04T12:08:56.235-07:00
 "YYYY-'W'ww-u"  2001-W27-3
 ---------------------------------------------------------------
+http://stackoverflow.com/questions/4772425/change-date-format-in-a-java-string
+---------------------------------------------------------------
 formatter = new SimpleDateFormat("EEE d MMM yy", currentLocale);
 today = new Date();
 result = formatter.format(today);
