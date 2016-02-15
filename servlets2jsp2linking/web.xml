@@ -1,0 +1,8 @@
+<servlet>
+    <servlet-name>page</servlet-name>
+    <jsp-file>/page.html</jsp-file>
+</servlet>
+<servlet-mapping>
+    <servlet-name>page</servlet-name>
+    <url-pattern>/app/page</url-pattern>
+</servlet-mapping>
