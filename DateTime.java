@@ -34,7 +34,12 @@ Examples:
 "yyyy-MM-dd'T'HH:mm:ss.SSSXXX"   2001-07-04T12:08:56.235-07:00
 "YYYY-'W'ww-u"  2001-W27-3
 ---------------------------------------------------------------
-
+formatter = new SimpleDateFormat("EEE d MMM yy", currentLocale);
+today = new Date();
+result = formatter.format(today);
+System.out.println("Locale: " + currentLocale.toString());
+System.out.println("Result: " + result);
+--------------------------------------------------------------
 //Gibt im Grunde ein DateTime.NOW() aus
   DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss:SSS'Z'");
   Date date = new Date();
