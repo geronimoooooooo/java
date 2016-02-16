@@ -64,7 +64,11 @@ WARNUNG: The web application [tstp2sos] appears to have started a thread named [
 http://stackoverflow.com/questions/3230324/quartz-scheduler-in-tomcat-6-thread-does-not-stop
 kann man scheduler.shutdown(true); nutzen?? Werden da dann nicht alle jobs gestoppt? Möchte ja nur einen spezifischen job/service stoppen.
 ##########################
-	
+	SCHWERWIEGEND: Servlet [LoadOnStartAppConfiguration] in web application [/iridiummail2geojson] threw load() exception
+java.lang.ClassNotFoundException: utility.LoadOnStartAppConfiguration
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1305)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1157)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:520)
 ##########################
 	
 ##############################################################################
