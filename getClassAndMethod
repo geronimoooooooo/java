@@ -1,0 +1,2 @@
+logger.info(("This is "+Thread.currentThread().getStackTrace()[1].getMethodName()+"--"+getClass().getName()));
+logger.info(new Object(){}.getClass().getEnclosingMethod().getName());
