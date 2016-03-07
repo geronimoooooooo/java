@@ -1,5 +1,49 @@
 http://logback.qos.ch/manual/filters.html
 
+Chapter 4: Appender
+Appender sind zuständig für das Schreiben von logevents. Appenders are named entities. Kann man dann mit Namen referenziren.
+<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+<appender name="FILE_INFO" class="ch.qos.logback.core.FileAppender">
+
+
+RollingFileAppender to rollover log files. RollingPolicy. Archiving the current log file. TimeBasedRollingPolicy.
+It defines a rollover policy based on time, for example by day or by month.
+ 
+   <file>logFile.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <!-- daily rollover -->
+      <fileNamePattern>logFile.%d{yyyy-MM-dd}.log</fileNamePattern>
+
+      <!-- keep 30 days' worth of history -->
+      <maxHistory>30</maxHistory>
+    </rollingPolicy>
+
+<configuration>
+  <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>mylog.txt</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <!-- rollover daily -->
+      <fileNamePattern>mylog-%d{yyyy-MM-dd}.%i.txt</fileNamePattern>
+      <timeBasedFileNamingAndTriggeringPolicy
+            class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        <!-- or whenever the file size reaches 100MB -->
+        <maxFileSize>100MB</maxFileSize>
+      </timeBasedFileNamingAndTriggeringPolicy>
+    </rollingPolicy>
+    <encoder>
+      <pattern>%msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="DEBUG">
+    <appender-ref ref="ROLLING" />
+  </root>
+</configuration>
+
+Both the %i and %d tokens are mandatory.
+KB, MB and respectively GB. For example, 5000000, 5000KB, 5MB and 2GB
+
+
 Chapter 7: Filters
 Filter als ordered list. .filter. werden in .appender. hinzugefügt. Filter haben DENY, ACCEPT, NEUTRAL. Wenn ein Filter schon DENY erfüllt, werden die anderen Filter 
 gar nicht mehr angeschaut. Bei NEUTRAL wird der nächste Filter noch angeschaut.  Man kann auch eigene Filter in Java mit @Override implementieren.
