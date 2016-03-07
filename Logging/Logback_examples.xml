@@ -41,3 +41,42 @@
     <appender-ref ref="STDERR" />
 </root>
 ##################################################################################
+<file>logFile.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <!-- daily rollover -->
+      <fileNamePattern>logFile.%d{yyyy-MM-dd}.log</fileNamePattern>
+
+      <!-- keep 30 days' worth of history -->
+      <maxHistory>30</maxHistory>
+    </rollingPolicy>
+
+<configuration>
+  <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>mylog.txt</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <!-- rollover daily -->
+      <fileNamePattern>mylog-%d{yyyy-MM-dd}.%i.txt</fileNamePattern>
+      <timeBasedFileNamingAndTriggeringPolicy
+            class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        <!-- or whenever the file size reaches 100MB -->
+        <maxFileSize>100MB</maxFileSize>
+      </timeBasedFileNamingAndTriggeringPolicy>
+    </rollingPolicy>
+    <encoder>
+      <pattern>%msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="DEBUG">
+    <appender-ref ref="ROLLING" />
+  </root>
+</configuration>
+##################################################################################
+
+##################################################################################
+
+##################################################################################
+
+##################################################################################
+
+##################################################################################
