@@ -1,4 +1,10 @@
 ##################################################################################
+Examples: https://examples.javacodegeeks.com/core-java/logback-file-appender-example/
+##################################################################################
+Examples: http://qiita.com/visualskyrim/items/cd4ba1ef294880bd01b1
+##################################################################################
+Examples: http://www.mkyong.com/logging/logback-xml-example/
+##################################################################################
 <appender name="STDERR" class="ch.qos.logback.core.ConsoleAppender">
     <target>System.err</target>
     <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
