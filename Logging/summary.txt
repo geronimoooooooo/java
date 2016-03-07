@@ -1,0 +1,11 @@
+http://logback.qos.ch/manual/filters.html
+
+Chapter 7: Filters
+Filter als ordered list. Filter haben DENY, ACCEPT, NEUTRAL. Wenn ein Filter schon DENY erfüllt, werden die anderen Filter 
+gar nicht mehr angeschaut. .filter. werden in .appender. hinzugefügt. Man kann auch eigene Filter in Java mit @Override implementieren.
+
+package chapters.filters;
+public class SampleFilter extends Filter<ILoggingEvent> {
+LIEFERT DANN:  <filter class="chapters.filters.SampleFilter" />
+
+LevelFilter und ThresholdFilter
