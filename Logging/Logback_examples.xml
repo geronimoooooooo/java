@@ -86,3 +86,66 @@ Examples: http://www.mkyong.com/logging/logback-xml-example/
 ##################################################################################
 
 ##################################################################################
+<configuration>
+
+  <appender name="FILE_INFO" class="ch.qos.logback.core.FileAppender">
+    <!-- <file>..\myApp.log</file>  würde außerhalb des projektordners im workspace erstellen-->
+    <file>src\logger_info.log</file>
+  	<filter class="ch.qos.logback.classic.filter.LevelFilter">      
+         <level>INFO</level>         
+         <onMatch>ACCEPT</onMatch>
+         <!-- <onMismatch>DENY</onMismatch>-->
+    </filter>
+    
+    <filter class="ch.qos.logback.classic.filter.LevelFilter">      
+         <level>WARN</level>         
+         <onMatch>ACCEPT</onMatch>
+         <!-- <onMismatch>DENY</onMismatch>-->
+    </filter> 
+    
+	<filter class="ch.qos.logback.classic.filter.LevelFilter">      
+         <level>DEBUG</level>         
+         <onMatch>DENY</onMatch>
+         <!-- <onMismatch>DENY</onMismatch>-->
+    </filter> 
+   
+    <encoder>
+      <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+    </encoder>
+  </appender>
+  
+  <appender name="FILE_DEBUG" class="ch.qos.logback.core.FileAppender">
+    <!-- <file>..\myApp.log</file>  würde außerhalb des projektordners im workspace erstellen-->
+    <file>src\logger_debug.log</file>
+    <encoder>
+      <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+    </encoder>
+  </appender>
+  
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+<!--     <filter class="ch.qos.logback.classic.filter.LevelFilter">      
+         <level>INFO</level>         
+         <onMatch>ACCEPT</onMatch>
+         <onMismatch>DENY</onMismatch>
+    </filter>-->
+  </appender>  
+  	<!-- <logger name="start.Starter" level="debug" additivity="true">
+			
+	</logger>-->
+	
+	<root level="DEBUG">
+    	<appender-ref ref="STDOUT" />
+    	<appender-ref ref="FILE_DEBUG" />
+    	<appender-ref ref="FILE_INFO" />
+    <!-- 	
+    	<appender-ref ref="FILE_DEBUG" />
+    	<appender-ref ref="FILE_INFO" />
+    	 -->
+  	</root>
+ 
+</configuration>
