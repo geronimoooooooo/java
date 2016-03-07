@@ -1,11 +1,23 @@
 http://logback.qos.ch/manual/filters.html
 
 Chapter 7: Filters
-Filter als ordered list. Filter haben DENY, ACCEPT, NEUTRAL. Wenn ein Filter schon DENY erfüllt, werden die anderen Filter 
-gar nicht mehr angeschaut. .filter. werden in .appender. hinzugefügt. Man kann auch eigene Filter in Java mit @Override implementieren.
+Filter als ordered list. .filter. werden in .appender. hinzugefügt. Filter haben DENY, ACCEPT, NEUTRAL. Wenn ein Filter schon DENY erfüllt, werden die anderen Filter 
+gar nicht mehr angeschaut. Bei NEUTRAL wird der nächste Filter noch angeschaut.  Man kann auch eigene Filter in Java mit @Override implementieren.
 
 package chapters.filters;
 public class SampleFilter extends Filter<ILoggingEvent> {
 LIEFERT DANN:  <filter class="chapters.filters.SampleFilter" />
 
-LevelFilter und ThresholdFilter
+LevelFilter filters events based on exact level matching. Nur das matching wird akzeptiert.
+   <filter class="ch.qos.logback.classic.filter.LevelFilter">
+      <level>INFO</level>
+      <onMatch>ACCEPT</onMatch>
+      <onMismatch>DENY</onMismatch>
+    </filter>
+
+
+The ThresholdFilter filters events below the specified threshold.
+Alles was niedriger ist, wird ignoriert und alles was gleich oder größer ist, wird dann akzeptiert.
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>INFO</level>
+    </filter>
