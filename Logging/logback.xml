@@ -1,23 +1,25 @@
 <configuration>
-
+<timestamp key="byDay" datePattern="yyyy-MM-dd'T'HH-mmss"/>
+<timestamp key="byDay2" datePattern="yyyy-MM-dd"/>
   <appender name="FILE_INFO" class="ch.qos.logback.core.FileAppender">
     <!-- <file>..\myApp.log</file>  würde außerhalb des projektordners im workspace erstellen-->
-    <file>src\logger_info.log</file>
+    <file>logs/weblogger_logger01_info_${byDay2}.log</file>
   	<filter class="ch.qos.logback.classic.filter.LevelFilter">      
          <level>INFO</level>         
          <onMatch>ACCEPT</onMatch>
          <onMismatch>DENY</onMismatch>
     </filter>
     <encoder>
-      <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+      <pattern>%date %level [%thread] %logger{10} [%file:%line]#%M: %msg%n</pattern>
     </encoder>
   </appender>
   
   <appender name="FILE_DEBUG" class="ch.qos.logback.core.FileAppender">
     <!-- <file>..\myApp.log</file>  würde außerhalb des projektordners im workspace erstellen-->
-    <file>src\logger_debug.log</file>
+    <!-- <file>logs/weblogger_logger10_debug_${byDay}.log</file> -->
+    <file>${catalina.base}/logs/weblogger_logger01_debug_${byDay}.log</file>
     <encoder>
-      <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+      <pattern>%date %level [%thread] %logger{10} [%file:%line]#%M: %msg%n</pattern>
     </encoder>
   </appender>
   
