@@ -5,4 +5,6 @@ auf dem developer Rechner wäre es dann im C:\logs, da aus C:\eclipse-jee-luna-S
 ------------
 Schreibt auf C einer Festplatte:   <file>C:\logger_debuglog-${byDay}.txt.log</file>
 Würde auf developer Rechner in das eclipse verzeichnis erstellt:   <file>log.log</file>
----------
+------------
+Wenn logback.xml auf Developerrechner im src ist, dann ist es auf Tomcat: C:\tomcat\webapps\weblogger\WEB-INF\classes
+------------
