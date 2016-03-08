@@ -1,5 +1,5 @@
 Bei logback im logback.xml beim Speichern der logs
-Auf dem Tomcat8 published, erscheint das logfile im tomcat/logs ordner
+Auf dem Tomcat8 published, erscheint das logfile im tomcat C:\tomcat ordner bei <file>weblogger_logger3_info_${byDay2}.log</file>
 <file>../../logs/weblogger_logger_info_${byDay2}.log</file>
 auf dem developer Rechner wäre es dann im C:\logs, da aus C:\eclipse-jee-luna-SR2-win32-x86_64\eclipse relativiert wurde
 ------------
