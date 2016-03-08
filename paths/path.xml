@@ -9,6 +9,9 @@ Würde auf developer Rechner in das eclipse verzeichnis erstellt:   <file>log.lo
 Wenn logback.xml auf Developerrechner im src ist, dann ist es auf Tomcat: C:\tomcat\webapps\weblogger\WEB-INF\classes
 ------------
 <file>${catalina.base}/logs/weblogger_logger6_debug_${byDay}.log</file> 
+speichert auf web server in C:\tomcat\logs
+speicher auf developer Rechner in C:\java_workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp2\logs
+------------
 <file>logs/weblogger_logger5_info_${byDay2}.log</file>
-speichert in C:\tomcat\logs
+speichert auf web server in C:\tomcat\logs
 ------------
