@@ -1,0 +1,17 @@
+http://stackoverflow.com/questions/2989560/how-to-get-the-fields-in-an-object-via-reflection
+
+Object someObject = getItSomehow();
+for (Field field : someObject.getClass().getDeclaredFields()) {
+    field.setAccessible(true); // You might want to set modifier to public first.
+    Object value = field.get(someObject); 
+    if (value != null) {
+        System.out.println(field.getName() + "=" + value);
+    }
+}
+
+
+GeoJson gj = geoJson.list_geoJson.get(0);
+				for (Field field : gj.getClass().getDeclaredFields()) {
+					logger.debug(field.getName()+ ": "+field.get(gj));
+				}
+--------------------------------------------------------------------------------------				
