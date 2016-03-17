@@ -105,6 +105,8 @@ Verfügbare WebSocket chats:
 •/iridium
 
 ##############################################################################################
-
+Wenn mit RequestDispatcher.forward() weiterleitet, um den Link von der Seite zu bekommen wo 
+request.getAttribute("javax.servlet.forward.request_uri")
+${requestScope['javax.servlet.forward.request_uri']}
 
 
