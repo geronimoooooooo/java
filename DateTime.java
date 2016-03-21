@@ -1,3 +1,20 @@
+Seit Java8:
+Examples
++ http://www.journaldev.com/2800/java-8-date-time-api-example-tutorial-localdate-instant-localdatetime-parse-and-format
+
+
+	DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
+	Instant instant = Instant.now();
+		
+	instant = Instant.parse("1995-10-23T10:12:35Z");
+		
+	System.out.println(instant);
+	//1995-10-23T10:12:35Z
+	System.out.println("time: "+Instant.now());
+	//time: 2016-03-21T13:25:43.415Z
+	System.out.println("ldt:  "+LocalDateTime.now().withNano(0).format(FORMATTER));
+	//ldt:  2016-03-21T14:25:43Z
+------------------------------------------------------------------------------------------------
 G   Era designator  Text    AD
 y   Year    Year    1996; 96
 Y   Week year   Year    2009; 09
