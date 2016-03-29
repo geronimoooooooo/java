@@ -1,0 +1,3 @@
+http://stackoverflow.com/questions/24282315/websocket-serverendpoint-and-clientendpoint-does-not-exchange-messages
+http://www.programmingforliving.com/2013/08/jsr-356-java-api-for-websocket-client-api.html
+https://blogs.oracle.com/arungupta/entry/websocket_client_and_server_endpoint
