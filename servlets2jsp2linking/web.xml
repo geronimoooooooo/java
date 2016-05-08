@@ -15,6 +15,15 @@
     <load-on-startup>1</load-on-startup>
   </servlet>
   
+  <servlet>
+    <servlet-name>insertsensor</servlet-name>
+    <jsp-file>/insertsensor.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+    <servlet-name>insertsensor</servlet-name>
+    <url-pattern>/insertsensor</url-pattern>
+</servlet-mapping>
+  
 <servlet>
     <servlet-name>page</servlet-name>
     <jsp-file>/page.html</jsp-file>
