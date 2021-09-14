@@ -82,3 +82,11 @@ File[] listOfFiles = folder.listFiles();
       }
     }
 -------------------------------------------------------------------
+File fileOutput;
+PrintWriter pw;
+//file in the same folder als your eclipse.exe
+fileOutput = new File("directory_file.dat");
+pw = new PrintWriter(fileOutput);
+pw.print("some text");
+pw.close();
+-------------------------------------------------------------------
