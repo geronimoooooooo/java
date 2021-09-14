@@ -1,5 +1,7 @@
 https://www.baeldung.com/java-lang-processbuilder-api
-EXAMPLES https://www.geeksforgeeks.org/java-lang-processbuilder-class-java/
+EXAMPLES 
+++ https://www.geeksforgeeks.org/java-lang-processbuilder-class-java/
+++ https://mkyong.com/java/java-processbuilder-examples/
 
 + Process execute operating system commands
 + ProcessBuilder um operating system Prozesse zu kreieren und konfigurieren
