@@ -15,3 +15,15 @@ Process process = processBuilder.start();
 
 processBuilder.command("/bin/bash", "-c", "echo $GREETING");
 Process process = processBuilder.start();
+-------------------------------------------------------------
++ ruft die Windows-Eingabeaufforderung (MS-DOS) auf und
++ kopiert die .xml-Datei in eine gleichnamige .dat-Datei
+  
+  try {	
+			String[] cmd = { "cmd.exe", "/c", "copy", fileinStr, fileoutStr };
+			Runtime.getRuntime().exec( cmd );	
+		}
+		catch (Exception e) {
+			System.out.println( "Es ist folgender Fehler aufgetreten: \n" + e );
+		}
+------------------------------------------------------------------------
