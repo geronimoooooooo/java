@@ -4,10 +4,8 @@ Examples
 
 
 	DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
-	Instant instant = Instant.now();
-		
-	instant = Instant.parse("1995-10-23T10:12:35Z");
-		
+	Instant instant = Instant.now();		
+	instant = Instant.parse("1995-10-23T10:12:35Z");		
 	System.out.println(instant);
 	//1995-10-23T10:12:35Z
 	System.out.println("time: "+Instant.now());
@@ -15,6 +13,29 @@ Examples
 	System.out.println("ldt:  "+LocalDateTime.now().withNano(0).format(FORMATTER));
 	//ldt:  2016-03-21T14:25:43Z
 ------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+	Instant in = Instant.now();
+	System.out.println(in); // 2021-09-22T10:17:16.862Z
+	in = in.truncatedTo(ChronoUnit.SECONDS);
+	System.out.println(in); // 2021-09-22T10:18:38Z
+
+	LocalDateTime ldt = LocalDateTime.now();
+	System.out.println(ldt); // 2021-09-22T12:18:38.243
+	ldt = ldt.truncatedTo(ChronoUnit.SECONDS);
+	System.out.println(ldt);// 2021-09-22T12:18:38	
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+	
+	//Gibt im Grunde ein DateTime.NOW() aus
+  DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss:SSS'Z'");
+  Date date = new Date();
+  System.out.println(dateFormat.format(date)); //2015-08-14T11:22:46:131Z  use :SSS for ms
+  time_value=dateFormat.format(date);
+---------------------------------------------------------------
+public String getCurrentTimeStamp() {
+    return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date());
+}
+---------------------------------------------------------------
 G   Era designator  Text    AD
 y   Year    Year    1996; 96
 Y   Week year   Year    2009; 09
@@ -59,29 +80,10 @@ result = formatter.format(today);
 System.out.println("Locale: " + currentLocale.toString());
 System.out.println("Result: " + result);
 --------------------------------------------------------------
-//Gibt im Grunde ein DateTime.NOW() aus
-  DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss:SSS'Z'");
-  Date date = new Date();
-  System.out.println(dateFormat.format(date)); //2015-08-14T11:22:46:131Z  use :SSS for ms
-  time_value=dateFormat.format(date);
----------------------------------------------------------------
-public String getCurrentTimeStamp() {
-    return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date());
-}
----------------------------------------------------------------
 long startTime = System.nanoTime;
 long endTime = System.nanoTime() - startTime;
 System.out.println("elapsed time:" + endTime / 1000000);
----------------------------------------------------------------
-DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
-		Date date = new Date();
-		System.out.println(dateFormat.format(date)); //2015-08-14T11:22:46:131Z  use :SSS for ms
-		//time_value=dateFormat.format(date);
----------------------------------------------------------------
-DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
-		Date date = new Date();
-		System.out.println(dateFormat.format(date)); //2015-08-14T11:22:46:131Z  use :SSS for ms
-		//time_value=dateFormat.format(date);
+--------------------------------------------------------------
 ---------------------------------------------------------------
 show actual time in jsp
 <%@page import="utility.DateTimeHelper"%>
