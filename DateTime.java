@@ -26,13 +26,31 @@ Unlike the old java.util.Date which has milliseconds precision, an Instant has n
 	System.out.println(ldt);// 2021-09-22T12:18:38	
 ------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------
-	
-	//Gibt im Grunde ein DateTime.NOW() aus
+  //Gibt im Grunde ein DateTime.NOW() aus
   DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss:SSS'Z'");
   Date date = new Date();
   System.out.println(dateFormat.format(date)); //2015-08-14T11:22:46:131Z  use :SSS for ms
   time_value=dateFormat.format(date);
 ---------------------------------------------------------------
+Calendar cal = Calendar.getInstance();  // current time
+cal.set(Calendar.WEEK_OF_MONTH, cal.get(Calendar.WEEK_OF_MONTH) - 2);
+Date now = cal.getTime();
+SimpleDateFormat sdf = SimpleDateFormat("yyyy-MM-dd+HH:mm:ss");
+String timeStr = sdf.format(now);
+--------------------------------------------------------------------
+Wenn man möchte dass ein ein RequestDispatcher erst nach 5 Sekunden aufgerufen wird.
+Oder überhaupt einen thread.sleep(5000) möchte
+
+new java.util.Timer().schedule( 
+        new java.util.TimerTask() {
+            @Override
+            public void run() {
+                // your code here
+            }
+        }, 
+        5000 
+);
+--------------------------------------------------------------------
 public String getCurrentTimeStamp() {
     return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date());
 }
