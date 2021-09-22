@@ -14,6 +14,7 @@ Examples
 	//ldt:  2016-03-21T14:25:43Z
 ------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------
+Unlike the old java.util.Date which has milliseconds precision, an Instant has nanoseconds precision.
 	Instant in = Instant.now();
 	System.out.println(in); // 2021-09-22T10:17:16.862Z
 	in = in.truncatedTo(ChronoUnit.SECONDS);
