@@ -4,13 +4,25 @@
 	 * @return
 	 * @throws Exception
 	 */
-	public static Document loadXMLFromString(String xml) throws Exception
+	public static Document stringToDocument(String xml) throws Exception
 	{
 	    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 	    DocumentBuilder builder = factory.newDocumentBuilder();
 	    InputSource is = new InputSource(new StringReader(xml));
 	    return builder.parse(is);
 	}
+----------------------------------------------------------------------------------------------------------
+StringBuilder xmlStringBuilder = new StringBuilder();
+xmlStringBuilder.append("<?xml version = "1.0"?> <class> </class>");
+ByteArrayInputStream input =  new ByteArrayInputStream(xmlStringBuilder.toString().getBytes("UTF-8"));
+Document doc = builder.parse(input);
+----------------------------------------------------------------------------------------------------------
+        DocumentBuilderFactory dbf =DocumentBuilderFactory.newInstance();
+        DocumentBuilder db = dbf.newDocumentBuilder();
+        InputSource is = new InputSource();
+        is.setCharacterStream(new StringReader(strXmlRecords));
+
+        Document doc = db.parse(is);
 ----------------------------------------------------------------------------------------------------------
 //http://www.rgagnon.com/javadetails/java-0573.html
 
