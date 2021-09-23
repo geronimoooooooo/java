@@ -1,5 +1,11 @@
 Hier findet man alle möglichen Stream Examples:
 https://docs.oracle.com/javase/tutorial/essential/io/bytestreams.html
+---------------------------------------------------------------------------
+Streams... sequence of data
+byte stream (base abstract class InputStream and OutputStream)
+    or 
+character stream (base abstract class Reader and Writer)
+
 
 
 InputStream is = urlc.getInputStream();
