@@ -13,6 +13,23 @@ Examples
 	System.out.println("ldt:  "+LocalDateTime.now().withNano(0).format(FORMATTER));
 	//ldt:  2016-03-21T14:25:43Z
 ------------------------------------------------------------------------------------------------
+	Date dateCreated = rs.getDate("DATUM");
+	java.sql.Date d2 = new java.sql.Date(rs.getDate("DATUM").getTime());
+	// boolean isAdmin = rs.getBoolean("is_admin");
+	// int numPoints = rs.getInt("num_points");
+
+	java.sql.Timestamp timestamp = rs.getTimestamp("DATUM"); // O/P: DD:MM:YYYY HH:mm:ss
+	java.util.Date d3 = new java.util.Date(timestamp.getTime());
+
+	java.sql.Timestamp ts = rs.getTimestamp("DATUM");
+	java.sql.Date date = new java.sql.Date(ts.getTime());
+	java.util.Date dd = new java.util.Date(date.getTime());
+	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+
+	System.out.println(sdf.format(dd)); // 2021-09-20T16:40:00
+	System.out.println("date: " + dateCreated); // 2021-09-20
+	System.out.println("date: " + d2); // 2021-09-20
+	System.out.println("date: " + d3); // Mon Sep 20 17:00:00 CEST 2021
 ------------------------------------------------------------------------------------------------
 Unlike the old java.util.Date which has milliseconds precision, an Instant has nanoseconds precision.
 	Instant in = Instant.now();
