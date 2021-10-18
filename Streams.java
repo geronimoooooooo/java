@@ -1,6 +1,8 @@
 Hier findet man alle möglichen Stream Examples:
 https://docs.oracle.com/javase/tutorial/essential/io/bytestreams.html
 ---------------------------------------------------------------------------
+Stream to String https://stackoverflow.com/questions/309424/how-do-i-read-convert-an-inputstream-into-a-string-in-java?rq=1
+---------------------------------------------------------------------------
 https://www.programiz.com/java-programming/printstream
 to convert a byte to text, you need a character encoding scheme. Reader classes uses character encoding to decode bytes and return characters to caller.
 Streams... sequence of data
