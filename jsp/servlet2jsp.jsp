@@ -35,3 +35,6 @@ io.jsp
     // Set refresh, autoload time as 5 seconds
     response.setIntHeader("Refresh", 5);
 %>
+<body>
+	<% out.println("Today's date-time: "+java.util.Calendar.getInstance().getTime()); %>
+</body>
