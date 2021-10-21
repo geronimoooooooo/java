@@ -38,3 +38,17 @@ io.jsp
 <body>
 	<% out.println("Today's date-time: "+java.util.Calendar.getInstance().getTime()); %>
 </body>
+
+<html><body>
+  <%@ page import = "torstenhorn.meinpackage.*" %>
+  <%
+    String s1 = request.getParameter( "EingabeZahl" );
+    if( null != s1 )
+      out.println( "Das Quadrat von '" + s1 + "' ist: '" + MeineBean.meineFunktion( s1 ) + "'." );
+
+
+Programmierbeispiel: Alle Formulardaten anzeigen: https://www.torsten-horn.de/techdocs/jsp-grundlagen.htm
+
+ <body>  
+	<%= "Welcome "+request.getParameter("uname")+" Email : "+request.getParameter("Email")%>  
+</body>
