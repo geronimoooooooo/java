@@ -31,3 +31,7 @@ io.jsp
 	 response.setStatus(response.SC_MOVED_TEMPORARILY);
 	 response.setHeader("Location", site); 
 %>
+<%
+    // Set refresh, autoload time as 5 seconds
+    response.setIntHeader("Refresh", 5);
+%>
