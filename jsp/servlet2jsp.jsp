@@ -52,3 +52,79 @@ Programmierbeispiel: Alle Formulardaten anzeigen: https://www.torsten-horn.de/te
  <body>  
 	<%= "Welcome "+request.getParameter("uname")+" Email : "+request.getParameter("Email")%>  
 </body>
+
+//Servlet Syntax
+PrintWriter out=response.getWriter();
+ //JSP Syntax
+<%out.print(“Welcome to W3adda.com);%>
+	
+	
+index.jsp
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>  
+    <body>  
+        <form action="Welcome.jsp">  
+            <pre>
+        	    <input type="submit" value="Click"><br/>  
+			</pre>
+        </form>  
+    </body>  
+</html>  
+	
+	3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    
+	<servlet>  
+        <servlet-name>Mine</servlet-name>  
+        <jsp-file>/Welcome.jsp</jsp-file>  
+   <init-param>  
+        <param-name>SiteNameConfig</param-name>  
+        <param-value>w3adda.com</param-value>  
+    </init-param>   
+    </servlet> 
+  
+    <servlet-mapping>  
+        <servlet-name>Mine</servlet-name>  
+        <url-pattern>/Welcome</url-pattern>  
+    </servlet-mapping>  
+    
+    <context-param>  
+        <param-name>SiteNameApp</param-name>  
+        <param-value>w3adda.com</param-value>  
+    </context-param>  
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
+	
+	  <body>  
+        <%
+            String siteName = application.getInitParameter("SiteNameApp");
+            out.print("Welcome " + siteName);
+			String siteName = config.getInitParameter("SiteNameConfig");
+            out.print("Welcome " + siteName);
