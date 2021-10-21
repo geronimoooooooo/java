@@ -16,11 +16,18 @@ Date date = new Date();
 String currentDate = DateTimeHelper.date2String_T_Z_Format(date);
 String von_backInTime = DateTimeHelper.getTimeXXXHoursBackInTime(2);
 %>
-    io.java file
-		String _urlSOS = Configuration.url2SosDefault;				
-		request.setAttribute("_urlSOS", _urlSOS);
-		RequestDispatcher rd = getServletContext().getRequestDispatcher("/io");
-    rd.forward(request, response);
+io.java file
+	String _urlSOS = Configuration.url2SosDefault;				
+	request.setAttribute("_urlSOS", _urlSOS);
+	RequestDispatcher rd = getServletContext().getRequestDispatcher("/io");
+	rd.forward(request, response);
 
-		io.jsp
-    <label for="_urlSOS" id="_urlSOS" type="text" name="_urlSOS" class="configFileClass" >${_urlSOS} </label>
+io.jsp
+	<label for="_urlSOS" id="_urlSOS" type="text" name="_urlSOS" class="configFileClass" >${_urlSOS} </label>
+
+<%
+	 // New location to be redirected
+	 String site = new String("http://www.photofuntoos.com");
+	 response.setStatus(response.SC_MOVED_TEMPORARILY);
+	 response.setHeader("Location", site); 
+%>
