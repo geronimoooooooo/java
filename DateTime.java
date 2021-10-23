@@ -42,6 +42,7 @@ Unlike the old java.util.Date which has milliseconds precision, an Instant has n
 	ldt = ldt.truncatedTo(ChronoUnit.SECONDS);
 	System.out.println(ldt);// 2021-09-22T12:18:38	
 ------------------------------------------------------------------------------------------------
+<% out.print("Today is:"+java.util.Calendar.getInstance().getTime()); %><br>
 ------------------------------------------------------------------------------------------------
   //Gibt im Grunde ein DateTime.NOW() aus
   DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss:SSS'Z'");
