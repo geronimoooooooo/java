@@ -25,6 +25,11 @@ io.java file
 io.jsp
 	<label for="_urlSOS" id="_urlSOS" type="text" name="_urlSOS" class="configFileClass" >${_urlSOS} </label>
 
+------
+ <% out.print("Today is:"+java.util.Calendar.getInstance().getTime()); %><br>
+------
+<a href = "session_second.jsp">Next Page</a>
+------
 <%
 	 // New location to be redirected
 	 String site = new String("http://www.photofuntoos.com");
