@@ -113,3 +113,17 @@ index.jsp
             out.print("Welcome " + siteName);
 			String siteName = config.getInitParameter("SiteNameConfig");
             out.print("Welcome " + siteName);
+-------------------------------------
+//takes all elements from the form
+Map<String, String[]> map_ParameterFromForm = request.getParameterMap();
+-------------------------------------
+  <tr>    
+    <%if(active_urlWithinGeofenceWfsService){ %>
+    <td>There is already a service running!<br/> Do you want to stop it?</td>
+    <td align="right">  <input formaction="<%=request.getContextPath()%>/websocketHandler" formmethod="POST" type="submit" value="Stop active Service"/> </td>
+                    <%}else{ %>
+    <td></td>
+    <td align="right">  <input formaction="<%=request.getContextPath()%>/websocketHandler" formmethod="POST" type="submit" value="Start Service"/> </td>                
+                    <%} %>
+  </tr>  
+-------------------------------------
