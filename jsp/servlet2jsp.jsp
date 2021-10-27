@@ -1,3 +1,25 @@
+
+-----------------------------------
+-----------------------------------
+-----------------------------------
+-----------------------------------
+-----------------------------------
+-----------------------------------
+-----------------------------------
+-----------------------------------
+-----------------------------------
+-----------------------------------
+-----------------------------------
+Send your data with a POST method to: <a href=${pageContext.request.requestURL}service>${pageContext.request.requestURL}service</a>.
+http://localhost:8080/focusgeofence_160728/service.  
+
+<meta http-equiv="refresh" content="2; url=${pageContext.request.contextPath}/services">
+
+<a href=${pageContext.request.contextPath}>
+	
+<td align="right">  <input formaction="<%=request.getContextPath()%>/ConfigurationHandler" formmethod="POST" type="submit" value="Save Configuration"/> </td>   
+	/focusgeofence_160728/ConfigurationHandler
+-----------------------------------
 <input formaction="/tstp2sos/ConfigurationHandler" formmethod="POST" type="submit" value="Save Configuration"/>
 <input id="urlTstpGetZeitreihen" name="urlTstpGetZeitreihen" size="65" placeholder="Tstp URL for GetAllZeitreihen" value= "${urlTstpGetZeitreihen}"/> 
   <tr>
