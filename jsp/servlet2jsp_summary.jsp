@@ -6,9 +6,29 @@
 -----------------------------------
 -----------------------------------
 -----------------------------------
+<div id="createService" class="row" style="margin-right: 15px;">
+	<div class="c_container_inner">
+		<div class="form-group ">
+			<div class="col-sm-12 input-group">
+				<button type="submit" id="createService"
+					formaction="<%=request.getContextPath()%>/CreateServiceHandler"
+					formmethod="POST" class="btn btn-primary pull-right">Create Service</button>
+			</div>
+		</div>
+	</div>
+</div>
 -----------------------------------
+Logger logger = (Logger) LoggerFactory.getLogger(getClass().getName()+".class");
 -----------------------------------
+if(request.getParameter("check_activate_sos") == null){
+    //checkbox not checked
+request.getParameter("urlYucca").trim();
 -----------------------------------
+String procedureName = request.getParameter("procedureName").split(" ")[1];
+proc.metadata.list_phenomena.forEach((e)->list_obsPropFromProcedure.add(e.title));
+loggerStatic.debug(new Object(){}.getClass().getEnclosingMethod().getName()+"(): "+ orTest.thingName);
+Instant time = Instant.now();
+List<String> list_phenomena = Arrays.asList(request.getParameterValues("obs_property"));
 -----------------------------------
 Send your data with a POST method to: <a href=${pageContext.request.requestURL}service>${pageContext.request.requestURL}service</a>.
 http://localhost:8080/focusgeofence_160728/service.  
