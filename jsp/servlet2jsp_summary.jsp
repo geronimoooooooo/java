@@ -5,6 +5,9 @@
 -----------------------------------
 -----------------------------------
 -----------------------------------
+List<City> cities = CityService.getAllCities();        
+request.setAttribute("cities", cities);        
+request.getRequestDispatcher("showCities.jsp").forward(request, response);
 -----------------------------------
 <div id="createService" class="row" style="margin-right: 15px;">
 	<div class="c_container_inner">
