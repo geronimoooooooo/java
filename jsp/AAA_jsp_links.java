@@ -13,3 +13,7 @@ https://www.geeksforgeeks.org/difference-between-servlet-and-jsp/
 https://kodejava.org/how-do-i-share-object-or-data-between-users-in-web-application/
 
 https://www.tutorialrepublic.com/jquery-examples.php
+
+
+c:forEach
+https://zetcode.com/articles/jstlforeach/
