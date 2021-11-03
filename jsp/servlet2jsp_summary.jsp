@@ -17,6 +17,7 @@
 -----------------------------------
 Wenn das Projekt und der Ordner "tstp2sos" heißen
 <input formaction="/tstp2sos/send-get-zeitreihen" formmethod="POST" type="submit" value="Get All Time Series"/>
+<a href ="stationen.jsp">stationen</a>
 -----------------------------------
 out.println("<html>");
 out.println("<head>");
