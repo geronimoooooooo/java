@@ -4,6 +4,14 @@
 -----------------------------------
 -----------------------------------
 -----------------------------------
+out.println("<html>");
+out.println("<head>");
+out.println("<title>Servlet upload</title>");  
+out.println("</head>");
+out.println("<body>");
+out.println("<p>Hier wird versucht file upzuloaden.</p>"); 
+out.println("</body>");
+out.println("</html>");
 -----------------------------------
 List<City> cities = CityService.getAllCities();        
 request.setAttribute("cities", cities);        
