@@ -2,7 +2,21 @@
 -----------------------------------
 -----------------------------------
 -----------------------------------
+ <tr>
+    <td class="tg-f2ue">Station Name-Ort</td>
+    	<td class="tg-z2zr">
+       	<select name="name-ort" size="1" onchange="changeFunc(value)" >
+    	<c:forEach items="${list_namesOrt}" var="name" varStatus="status">
+  			<option value="${name}">${name}</option>
+		</c:forEach>
+      		<option selected="selected">1</option>
+      		<option>2</option>
+    	</select>       
+  	</td>
+  </tr>
 -----------------------------------
+Wenn das Projekt und der Ordner "tstp2sos" heißen
+<input formaction="/tstp2sos/send-get-zeitreihen" formmethod="POST" type="submit" value="Get All Time Series"/>
 -----------------------------------
 out.println("<html>");
 out.println("<head>");
