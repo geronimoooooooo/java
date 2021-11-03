@@ -30,7 +30,10 @@ out.println("</html>");
 -----------------------------------
 List<City> cities = CityService.getAllCities();        
 request.setAttribute("cities", cities);        
-request.getRequestDispatcher("showCities.jsp").forward(request, response);
+
+RequestDispatcher rd = getServletContext().getRequestDispatcher("/stationen.jsp");
+rd.forward(request, response);
+request.getRequestDispatcher("stationen.jsp").forward(request, response);
 -----------------------------------
 <div id="createService" class="row" style="margin-right: 15px;">
 	<div class="c_container_inner">
