@@ -1,3 +1,18 @@
+schedule a periodic task
+java.util.Timer.scheduleAtFixedRate
+------
+Do something every one second
+Timer timer = new Timer();
+timer.schedule(new TimerTask() {
+    @Override
+    public void run() {
+        //code
+    }
+}, 0, 1000);
+------
+
+
+---------------------------------------------------------------
 Einfach irgendwo mit aufrufen
 scheduler.ScheduledExecutorServiceBeeper beep = new scheduler.ScheduledExecutorServiceBeeper();
 	beep.beepForAnHour();
