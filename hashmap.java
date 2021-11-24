@@ -23,3 +23,10 @@ for (Entry<String, List<String>> header : connection.getHeaderFields().entrySet(
 10 Examples:
 http://java67.blogspot.co.at/2013/02/10-examples-of-hashmap-in-java-programming-tutorial.html
 ---------------------------------------------------------------------------------
+JSONObject jobj=job.get("hash").getASJsonObject();
+Sete <Map.Entry<String, JSonElement>> entries = jobj.entrySet();
+for(Map.Entry<String, JsonElement>> entry : entries){
+	logger.d(entry.getKey());
+	jobj2.get(entry.getKey()).getAsString());
+}
+---------------------------------------------------------------------------------
