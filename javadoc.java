@@ -3,7 +3,7 @@ Bilder müssen .gif sein
 /**
  * Used to read, write files, directories and work with strings!
  * <p><IMG SRC="../doc-files/zr_sos_tstp.gif">
- * @author slukic
+ * @author name
  */
 public class TextFiles {
 
