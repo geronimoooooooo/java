@@ -50,6 +50,7 @@
       <param-value>forApplicant@xyz.com</param-value>
     </init-param>
   </servlet>
+	String username=config.getInitParameter("Email"); // forApplicant@xyz.com
   
   <servlet-mapping>
     <servlet-name>applicant</servlet-name>
