@@ -1,5 +1,4 @@
 <display-name>Spring3 MVC Application</display-name>
-
 	<servlet>
 		<servlet-name>spring-web</servlet-name>
 		<servlet-class>
@@ -26,3 +25,40 @@
 	<error-page>
 		<location>/WEB-INF/views/jsp/error.jsp</location>
 	</error-page>
+##########################################
+<web-app>
+  
+<servlet>
+    <servlet-name>recruiter</servlet-name>
+    <servlet-class>Recruiter</servlet-class>
+    <init-param>
+      <param-name>Email</param-name>
+      <param-value>forRecruiter@xyz.com</param-value>
+    </init-param>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>recruiter</servlet-name>
+    <url-pattern>/servlet1</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>applicant</servlet-name>
+    <servlet-class>Applicant</servlet-class>
+    <init-param>
+      <param-name>Email</param-name>
+      <param-value>forApplicant@xyz.com</param-value>
+    </init-param>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>applicant</servlet-name>
+    <url-pattern>/servlet2</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+    <param-name>Website-name</param-name>
+    <param-value>NewWebsite.tg</param-value>
+  </context-param>
+  
+</web-app>
