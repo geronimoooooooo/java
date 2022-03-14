@@ -8,11 +8,25 @@ ${pageContext.request.requestURI} -- /geo-websocket/start.jsp
 <a href=${pageContext.request.contextPath}/geofence>${base_href}geofence</a> liefert http://localhost:8080/geo-websocket/geofence
 -----------------------------------------------
 <%
-System.out.println("inside jsp.ok gibt es nur 'request' aber kein 'pageContext'");
+System.out.println("inside scriptlet java gibt es nur 'request' aber kein 'pageContext'");
 System.out.println(request.getRequestURL()); http://localhost:8080/npbg-klima/ok.jsp
 System.out.println(request.getRequestURI()); /npbg-klima/ok.jsp
 System.out.println(request.getContextPath()); /npbg-klima
 %>
+
+<a href="<%=request.getRequestURL() %>">=request.getRequestURL()</a><br> http://localhost:8080/npbg-klima/ok.jsp
+<a href="<%=request.getRequestURI() %>">=request.getRequestURI()</a><br> http://localhost:8080/npbg-klima/ok.jsp
+<a href="<%=request.getContextPath() %>">=request.getContextPath()</a><br> http://localhost:8080/npbg-klima
+<a href="${pageContext.request.requestURL}">pageContext.request.requestURL</a><br> http://localhost:8080/npbg-klima/ok.jsp
+<a href="${pageContext.request.requestURI}">pageContext.request.requestURI</a><br> http://localhost:8080/npbg-klima/ok.jsp
+<a href="${pageContext.request.contextPath}">pageContext.request.contextPath</a><br> http://localhost:8080/npbg-klima/
+<br>
+<a href ="${pageContext.request.contextPath}/stationen">{pageContext.request.contextPath}/stationen</a> http://localhost:8080/npbg-klima/stationen
+<br>
+<label>pageContext.request.requestURL: ${pageContext.request.requestURL}</label><br> http://localhost:8080/npbg-klima/ok.jsp
+<label>pageContext.request.requestURI: ${pageContext.request.requestURI}</label><br> /npbg-klima/ok.jsp
+<label>pageContext.request.contextPath: ${pageContext.request.contextPath}</label><br> /npbg-klima
+
 ------------------------------------------------
 Aus: http://localhost:8080/geo-websocket/start.jsp  wird: ws://localhost:8080/geo-websocket/start.jsp
 
