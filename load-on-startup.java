@@ -8,9 +8,9 @@ https://stackoverflow.com/questions/18808853/load-on-start-up-using-annotation-i
         System.out.println("This is init load-on-startup from Tester");
     }
 
-	<servlet>   
-    <display-name>Tester</display-name>
-    <servlet-name>Tester</servlet-name>
-    <servlet-class>handler.Tester</servlet-class>
-    <load-on-startup>0</load-on-startup>  
-  </servlet>
+<servlet>   
+	<display-name>Tester</display-name>
+  <servlet-name>Tester</servlet-name>
+  <servlet-class>handler.Tester</servlet-class>
+  <load-on-startup>0</load-on-startup>  
+</servlet>
