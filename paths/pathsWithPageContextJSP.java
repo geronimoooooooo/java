@@ -7,7 +7,13 @@ ${pageContext.request.requestURI} -- /geo-websocket/start.jsp
 <a href="geofence">${base_href}geofence</a> liefert http://localhost:8080/geo-websocket/geofence
 <a href=${pageContext.request.contextPath}/geofence>${base_href}geofence</a> liefert http://localhost:8080/geo-websocket/geofence
 -----------------------------------------------
-
+<%
+System.out.println("inside jsp.ok gibt es nur 'request' aber kein 'pageContext'");
+System.out.println(request.getRequestURL()); http://localhost:8080/npbg-klima/ok.jsp
+System.out.println(request.getRequestURI()); /npbg-klima/ok.jsp
+System.out.println(request.getContextPath()); /npbg-klima
+%>
+------------------------------------------------
 Aus: http://localhost:8080/geo-websocket/start.jsp  wird: ws://localhost:8080/geo-websocket/start.jsp
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
