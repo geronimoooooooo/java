@@ -2,7 +2,9 @@ Seit Java8:
 Examples
 + http://www.journaldev.com/2800/java-8-date-time-api-example-tutorial-localdate-instant-localdatetime-parse-and-format
 
-
+System.out.println("time: " +new java.util.Date()+ ", "+Instant.now()); 
+//Mon Mar 14 20:41:46 CET 2022, 2022-03-14T19:41:46.256Z
+-----------------------------------------------------------------------------------
 	DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
 	Instant instant = Instant.now();		
 	instant = Instant.parse("1995-10-23T10:12:35Z");		
