@@ -9,7 +9,7 @@ https://stackoverflow.com/questions/18808853/load-on-start-up-using-annotation-i
     }
 
 <servlet>   
-	<display-name>Tester</display-name>
+  <display-name>Tester</display-name>
   <servlet-name>Tester</servlet-name>
   <servlet-class>handler.Tester</servlet-class>
   <load-on-startup>0</load-on-startup>  
