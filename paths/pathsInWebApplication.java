@@ -1,9 +1,13 @@
++ Weiterleiten aus einem Servlet doGet() zu einem anderen Servlet doGet()
+RequestDispatcher rd = getServletContext().getRequestDispatcher("/insert");
+rd.forward(request, response);
+-----------------------------------------------
 ${pageContext.request.requestURL} -- http://localhost:8080/geo-websocket/start.jsp 
+${pageContext.request.requestURI} -- /geo-websocket/start.jsp 
 ${pageContext.request.contextPath} -- /geo-websocket 
 ${pageContext.request.serverName} -- localhost 
 ${pageContext.request.localPort} -- 8080 
 ${pageContext.request.scheme} -- http 
-${pageContext.request.requestURI} -- /geo-websocket/start.jsp 
 <a href="geofence">${base_href}geofence</a> liefert http://localhost:8080/geo-websocket/geofence
 <a href=${pageContext.request.contextPath}/geofence>${base_href}geofence</a> liefert http://localhost:8080/geo-websocket/geofence
 -----------------------------------------------
