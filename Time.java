@@ -2,6 +2,14 @@ Seit Java8:
 Examples
 + http://www.journaldev.com/2800/java-8-date-time-api-example-tutorial-localdate-instant-localdatetime-parse-and-format
 
+
+long startTime = System.nanoTime();
+long startTime2 = System.currentTimeMillis();
+long var = System.nanoTime();
+long endVar = System.currentTimeMillis();
+long endTime = System.nanoTime() - startTime;
+System.out.println("elapsed time in ms:" + endTime / 1000000);
+-----------------------------------------------------------------------------------
 System.out.println("time: " +new java.util.Date()+ ", "+Instant.now()); 
 //Mon Mar 14 20:41:46 CET 2022, 2022-03-14T19:41:46.256Z
 -----------------------------------------------------------------------------------
