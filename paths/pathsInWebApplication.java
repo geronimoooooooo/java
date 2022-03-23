@@ -31,7 +31,11 @@ System.out.println(request.getContextPath()); /npbg-klima
 <label>pageContext.request.requestURI: ${pageContext.request.requestURI}</label><br> /npbg-klima/ok.jsp
 <label>pageContext.request.contextPath: ${pageContext.request.contextPath}</label><br> /npbg-klima
 
-------------------------------------------------
+------------------------------------------------------------------------------------------------
+gets the absolute path for a file
+ServletContext sc = this.getServletContext();
+String path = sc.getRealPath("/WEB-INF/file.txt");
+------------------------------------------------------------------------------------------------
 Aus: http://localhost:8080/geo-websocket/start.jsp  wird: ws://localhost:8080/geo-websocket/start.jsp
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
