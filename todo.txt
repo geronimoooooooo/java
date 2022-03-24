@@ -1,0 +1,29 @@
+Quiz
+https://www.shortcutfoo.com/app/dojos/eclipse-win/cheatsheet
+
+Servlet
+https://www.javatpoint.com/servletcontext
+
+HTML + CSS
+https://developer.mozilla.org/en-US/docs/Web/HTML/Applying_color
+https://www.quackit.com/html/tags/html_input_tag.cfm
+https://www.tutorialspoint.com/html/html_text_links.htm#:~:text=Linking%20Documents,to%20use%20tag.
+
+Code snippets
+https://www.codegrepper.com/code-examples/javascript/how+to+get+value+inside+span+using+javascript
+https://code-examples.net/de/q/8bb63c
+https://www.tabnine.com/code/java/classes/java.sql.SQLIntegrityConstraintViolationException
+http://www.java2s.com/
+https://www.delftstack.com/de/howto/java/
+
+Time
+https://www.baeldung.com/java-timer-and-timertask
+https://www.javatpoint.com/java-instant
+https://www.baeldung.com/java-period-duration
+https://stackoverflow.com/questions/55779996/calculate-days-hours-and-minutes-between-two-instants
+https://www.tutorialspoint.com/how-to-get-the-duration-between-two-instant-timestamps-in-java
+https://phrase.com/blog/posts/how-to-get-date-time-in-utc-or-gmt-in-java/
+https://howtodoinjava.com/java8/date-and-time-api-changes-in-java-8-lambda/
+https://stackoverflow.com/questions/38774734/getting-the-current-instant-in-a-specific-timezone
+https://www.geeksforgeeks.org/instant-minus-method-in-java-with-examples/
+https://stackoverflow.com/questions/15894731/how-to-stop-the-timer-after-certain-time
