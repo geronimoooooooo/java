@@ -15,6 +15,9 @@ System.out.println("time: " +new java.util.Date()+ ", "+Instant.now());
 -----------------------------------------------------------------------------------
 Get Current Date and Time:  https://www.javatpoint.com/java-get-current-date
 LocalDateTime now = LocalDateTime.now(); 
+
+jshell> LocalDateTime.of(LocalDate.now(), LocalTime.now())
+$52 ==> 2018-07-07T00:40:38.198318200
 -----------------------------------------------------------------------------------
 	DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
 	Instant instant = Instant.now();		
