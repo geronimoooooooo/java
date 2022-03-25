@@ -13,6 +13,9 @@ System.out.println("elapsed time in ms:" + endTime / 1000000);
 System.out.println("time: " +new java.util.Date()+ ", "+Instant.now()); 
 //Mon Mar 14 20:41:46 CET 2022, 2022-03-14T19:41:46.256Z
 -----------------------------------------------------------------------------------
+Get Current Date and Time:  https://www.javatpoint.com/java-get-current-date
+LocalDateTime now = LocalDateTime.now(); 
+-----------------------------------------------------------------------------------
 	DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
 	Instant instant = Instant.now();		
 	instant = Instant.parse("1995-10-23T10:12:35Z");		
