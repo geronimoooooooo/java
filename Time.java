@@ -10,6 +10,14 @@ long endVar = System.currentTimeMillis();
 long endTime = System.nanoTime() - startTime;
 System.out.println("elapsed time in ms:" + endTime / 1000000);
 -----------------------------------------------------------------------------------
+Von Instant zu LocalDateTime:
+
+	Instant instant = Instant.now();
+
+//Convert instant to LocalDateTime, no timezone, add a zero offset / UTC+0
+	LocalDateTime ldt = LocalDateTime.ofInstant(instant, ZoneOffset.UTC);
+	System.out.println("LocalDateTime : " + ldt);
+-----------------------------------------------------------------------------------	
 System.out.println("time: " +new java.util.Date()+ ", "+Instant.now()); 
 //Mon Mar 14 20:41:46 CET 2022, 2022-03-14T19:41:46.256Z
 -----------------------------------------------------------------------------------
