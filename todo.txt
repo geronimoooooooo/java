@@ -1,6 +1,12 @@
 Quiz
 https://www.shortcutfoo.com/app/dojos/eclipse-win/cheatsheet
 
+online Java Editor
+https://www.online-java.com/
+https://www.jdoodle.com/online-java-compiler/
+https://www.tutorialspoint.com/compile_java_online.php
+
+
 Servlet
 https://www.javatpoint.com/servletcontext
 
@@ -27,3 +33,12 @@ https://howtodoinjava.com/java8/date-and-time-api-changes-in-java-8-lambda/
 https://stackoverflow.com/questions/38774734/getting-the-current-instant-in-a-specific-timezone
 https://www.geeksforgeeks.org/instant-minus-method-in-java-with-examples/
 https://stackoverflow.com/questions/15894731/how-to-stop-the-timer-after-certain-time
+
+time home
+https://mkyong.com/java8/java-convert-instant-to-localdatetime/
+https://www.javatpoint.com/java-localdate
+https://beginnersbook.com/2017/10/java-convert-localdate-to-localdatetime/
+https://howtodoinjava.com/java/date-time/localdate-localdatetime-conversions/
+https://dzone.com/articles/working-with-localdate-localtime-and-localdatetime
+https://zetcode.com/all/#java
+
