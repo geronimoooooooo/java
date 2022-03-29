@@ -11,12 +11,18 @@ long endTime = System.nanoTime() - startTime;
 System.out.println("elapsed time in ms:" + endTime / 1000000);
 -----------------------------------------------------------------------------------
 Von Instant zu LocalDateTime:
+	Instant in = Instant.now(); 2022-03-29T12:39:08.052Z
+	LocalDateTime ldt = LocalDateTime.now(); 2022-03-29T14:39:08.052
+	LocalDateTime ldt2 = LocalDateTime.ofInstant(in, ZoneOffset.UTC);2022-03-29T12:39:08.052 UTC Zeit aber ohne Z hinten
+	LocalDateTime ldt3 = LocalDateTime.ofInstant(in, ZoneId.systemDefault());  2022-03-29T14:39:08.052
+		
+Von LocalDateTime zu Instant mit UTC Z (geht nur über ZonedDateTime):	
+      LocalDateTime ldt5 = LocalDateTime.now(); 2022-03-29T15:49:38.975      
+      ZonedDateTime zdt = ldt5.atZone(ZoneId.systemDefault()); 2022-03-29T15:49:38.975+02:00[Europe/Berlin]      
+      Instant in5 = zdt.toInstant(); 2022-03-29T13:49:38.975Z      
 
-	Instant instant = Instant.now();
-
-//Convert instant to LocalDateTime, no timezone, add a zero offset / UTC+0
-	LocalDateTime ldt = LocalDateTime.ofInstant(instant, ZoneOffset.UTC);
-	System.out.println("LocalDateTime : " + ldt);
+	System.out.println(LocalDateTime.now(Clock.systemUTC())); 2022-03-29T13:04:20.139  UTC Zeit aber ohne Z hinten
+	System.out.println(ZonedDateTime.now()); 2022-03-29T15:04:20.140+02:00[Europe/Berlin]
 -----------------------------------------------------------------------------------	
 System.out.println("time: " +new java.util.Date()+ ", "+Instant.now()); 
 //Mon Mar 14 20:41:46 CET 2022, 2022-03-14T19:41:46.256Z
