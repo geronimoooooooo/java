@@ -9,6 +9,9 @@ long var = System.nanoTime();
 long endVar = System.currentTimeMillis();
 long endTime = System.nanoTime() - startTime;
 System.out.println("elapsed time in ms:" + endTime / 1000000);
+
+-----------------------------------------------------------------------------------
+LocalDateTime oldDate = LocalDateTime.of(2016, Month.AUGUST, 31, 10, 20, 55);2016-08-31T10:20:55
 -----------------------------------------------------------------------------------
 Von Instant zu LocalDateTime:
 	Instant in = Instant.now(); 2022-03-29T12:39:08.052Z
