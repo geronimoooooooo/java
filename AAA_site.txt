@@ -7,6 +7,7 @@ https://beginnersbook.com/2017/07/load-on-startup-tag-in-web-xml-file-with-examp
 https://www3.ntu.edu.sg/HOME/EHCHUA/PROGRAMMING/java/JavaServletExamples.html#zz-7.
 
 ++ Java general ++
+https://howtodoinjava.com/
 https://www.journaldev.com/1050/java-timer-timertask-example
 https://dzone.com/articles/working-with-localdate-localtime-and-localdatetime
 
