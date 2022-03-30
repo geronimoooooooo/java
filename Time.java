@@ -1,7 +1,7 @@
 Seit Java8:
 Examples
 + http://www.journaldev.com/2800/java-8-date-time-api-example-tutorial-localdate-instant-localdatetime-parse-and-format
-
++ https://www.tutorialspoint.com/javatime/index.htm Auflistung aller Klassen und verfügbarer Methoden bezüglich ZEIT time
 
 long startTime = System.nanoTime();
 long startTime2 = System.currentTimeMillis();
@@ -39,10 +39,8 @@ $52 ==> 2018-07-07T00:40:38.198318200
 	DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
 	Instant instant = Instant.now();		
 	instant = Instant.parse("1995-10-23T10:12:35Z");		
-	System.out.println(instant);
-	//1995-10-23T10:12:35Z
-	System.out.println("time: "+Instant.now());
-	//time: 2016-03-21T13:25:43.415Z
+	System.out.println(instant); //1995-10-23T10:12:35Z
+	System.out.println("time: "+Instant.now());//time: 2016-03-21T13:25:43.415Z
 	System.out.println("ldt:  "+LocalDateTime.now().withNano(0).format(FORMATTER));
 	//ldt:  2016-03-21T14:25:43Z
 ------------------------------------------------------------------------------------------------
@@ -83,11 +81,6 @@ Unlike the old java.util.Date which has milliseconds precision, an Instant has n
   System.out.println(dateFormat.format(date)); //2015-08-14T11:22:46:131Z  use :SSS for ms
   time_value=dateFormat.format(date);
 ---------------------------------------------------------------
-Calendar cal = Calendar.getInstance();  // current time
-cal.set(Calendar.WEEK_OF_MONTH, cal.get(Calendar.WEEK_OF_MONTH) - 2);
-Date now = cal.getTime();
-SimpleDateFormat sdf = SimpleDateFormat("yyyy-MM-dd+HH:mm:ss");
-String timeStr = sdf.format(now);
 --------------------------------------------------------------------
 Wenn man möchte dass ein ein RequestDispatcher erst nach 5 Sekunden aufgerufen wird.
 Oder überhaupt einen thread.sleep(5000) möchte
@@ -144,11 +137,6 @@ Examples:
 ---------------------------------------------------------------
 http://stackoverflow.com/questions/4772425/change-date-format-in-a-java-string
 ---------------------------------------------------------------
-formatter = new SimpleDateFormat("EEE d MMM yy", currentLocale);
-today = new Date();
-result = formatter.format(today);
-System.out.println("Locale: " + currentLocale.toString());
-System.out.println("Result: " + result);
 --------------------------------------------------------------
 long startTime = System.nanoTime;
 long endTime = System.nanoTime() - startTime;
@@ -170,8 +158,6 @@ System.out.println("execute() nowTime: "+ DateTimeHelper.date2String_T_Z_Format(
 Date datePast = new Date(dateNow.getTime()-(1000*60*sdio.timeRepeatInterval)); //ms * seconds * minutes
 System.out.println("execute() : "+ DateTimeHelper.date2String_T_Z_Format(datePast));
 ---------------------------------------------------------------
-Date today = new Date();
-Date tomorrow = new Date(today.getTime() + (1000 * 60 * 60 * 24));
 ---------------------------------------------------------------
 Date date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").parse("2012-05-20T09:00:00.000Z");
 ---------------------------------------------------------------
