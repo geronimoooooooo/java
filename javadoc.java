@@ -1,3 +1,6 @@
+https://www.jrebel.com/blog/tips-and-tricks-for-better-java-documentation
+https://blog.joda.org/2012/11/javadoc-coding-standards.html
+
 Bilder müssen .gif sein
 
 /**
