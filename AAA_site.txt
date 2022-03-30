@@ -17,6 +17,9 @@ https://dzone.com/articles/working-with-localdate-localtime-and-localdatetime
 https://mkyong.com/java/how-to-convert-inputstream-to-string-in-java/
 https://www.codegrepper.com/code-examples/java
 
+++ JSP Servlet ++
+https://www.sitesbay.com/servlet/servlet-load-on-startup
+
 
 ++ online Java Editor ++
 https://www.online-java.com/
