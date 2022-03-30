@@ -1,10 +1,7 @@
 Quiz
 https://www.shortcutfoo.com/app/dojos/eclipse-win/cheatsheet
 
-online Java Editor
-https://www.online-java.com/
-https://www.jdoodle.com/online-java-compiler/
-https://www.tutorialspoint.com/compile_java_online.php
+
 
 
 Servlet
