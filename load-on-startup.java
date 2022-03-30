@@ -1,5 +1,5 @@
-Möchte man ein Servlet nach Deploy oder Serverstart sofort ausführen, dann auch die init() Methode in dem Servlet implementieren.
-Ohne init() muss man noch immer ein GET aufs Servlet machen.
+Möchte man ein Servlet nach Deploy oder Serverstart sofort ausführen, dann auch die init() Methode in dem Servlet implementieren. Load-on-startup bedeutet nicht, 
+dass doGet()aufgerufen wird. Ohne init() muss man noch immer ein GET aufs Servlet machen.
 Noch besser ist es gleich einen Listener zu nutzen.
 	
 https://stackoverflow.com/questions/18808853/load-on-start-up-using-annotation-in-java
