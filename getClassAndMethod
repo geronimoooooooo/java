@@ -1,2 +1,9 @@
+System.out.println(Thread.currentThread().getStackTrace()[1].getClassName()
+    +"."
+    +Thread.currentThread().getStackTrace()[1].getMethodName()
+    +"()");
+ //Tester1.main()
+ ----------------------------------------------------------------------------------------------------
+
 logger.info(("This is "+Thread.currentThread().getStackTrace()[1].getMethodName()+"--"+getClass().getName()));
 logger.info(new Object(){}.getClass().getEnclosingMethod().getName());
