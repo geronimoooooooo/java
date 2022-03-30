@@ -1,4 +1,5 @@
 Hier findet man alle möglichen Stream Examples:
+https://mkyong.com/java/how-to-convert-inputstream-to-string-in-java/
 https://docs.oracle.com/javase/tutorial/essential/io/bytestreams.html
 ---------------------------------------------------------------------------
 Stream to String https://stackoverflow.com/questions/309424/how-do-i-read-convert-an-inputstream-into-a-string-in-java?rq=1
