@@ -8,6 +8,7 @@ https://www3.ntu.edu.sg/HOME/EHCHUA/PROGRAMMING/java/JavaServletExamples.html#zz
 
 ++ Java general ++
 https://howtodoinjava.com/
+https://www.tutorialspoint.com/
 https://www.journaldev.com/1050/java-timer-timertask-example
 https://dzone.com/articles/working-with-localdate-localtime-and-localdatetime
 
