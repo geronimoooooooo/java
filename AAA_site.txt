@@ -19,7 +19,7 @@ https://www.codegrepper.com/code-examples/java
 
 ++ JSP Servlet ++
 https://www.sitesbay.com/servlet/servlet-load-on-startup
-
+https://beginnersbook.com/2013/05/servlet-context/
 
 ++ online Java Editor ++
 https://www.online-java.com/
