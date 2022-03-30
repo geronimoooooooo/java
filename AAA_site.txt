@@ -10,6 +10,10 @@ https://www3.ntu.edu.sg/HOME/EHCHUA/PROGRAMMING/java/JavaServletExamples.html#zz
 https://www.journaldev.com/1050/java-timer-timertask-example
 
 
+++ Java code snippets ++
+https://www.codegrepper.com/code-examples/java
+
+
 ++ online Java Editor ++
 https://www.online-java.com/
 https://www.jdoodle.com/online-java-compiler/
