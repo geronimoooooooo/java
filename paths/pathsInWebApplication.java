@@ -2,14 +2,14 @@
 RequestDispatcher rd = getServletContext().getRequestDispatcher("/insert");
 rd.forward(request, response);
 
-		String param = request.getParameter("p");		
-		
-		if(param == null || param.equals("")){
-			out.println("kein param value angegeben;");				
-		}else if(param.equals("2")) {
-			RequestDispatcher rd = request.getRequestDispatcher("index2.jsp");
-			rd.forward(request, response);
-		}
+String param = request.getParameter("p");		
+
+if(param == null || param.equals("")){
+	out.println("kein param value angegeben;");				
+}else if(param.equals("2")) {
+	RequestDispatcher rd = request.getRequestDispatcher("index2.jsp");
+	rd.forward(request, response);
+}
 -----------------------------------------------
 ${pageContext.request.requestURL} -- http://localhost:8080/geo-websocket/start.jsp 
 ${pageContext.request.requestURI} -- /geo-websocket/start.jsp 
