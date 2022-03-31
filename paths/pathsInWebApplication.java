@@ -4,8 +4,8 @@ rd.forward(request, response);
 
 String param = request.getParameter("p");
 		
-		if(param.equals("2")){
-				RequestDispatcher rd = request.getRequestDispatcher("index2.jsp");
+if(param.equals("2")){
+	RequestDispatcher rd = request.getRequestDispatcher("index2.jsp");
 				rd.forward(request, response);
 		}else{
 		}
