@@ -5,6 +5,8 @@ https://www.tutorialspoint.com/jdbc/jdbc-sample-code.htm
 Create Connection to DB
 https://www.tutorialspoint.com/jdbc/jdbc-db-connections.htm
 --------------------------------------------------------------------------------------------------------------
+PreparedStatement https://www.tutorialspoint.com/jdbc/jdbc-statements.htm
+
 Statement stmt = null;
 try {
    stmt = conn.createStatement( );
