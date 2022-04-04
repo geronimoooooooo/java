@@ -5,6 +5,7 @@ https://www.tutorialspoint.com/jdbc/jdbc-sample-code.htm
 Create Connection to DB
 https://www.tutorialspoint.com/jdbc/jdbc-db-connections.htm
 --------------------------------------------------------------------------------------------------------------
+Statement stmt = null;
 try {
    stmt = conn.createStatement( );
    . . .
@@ -13,7 +14,7 @@ catch (SQLException e) {
    . . .
 }
 finally {
-   . . .
+   stmt.close();
 }
 --------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------
