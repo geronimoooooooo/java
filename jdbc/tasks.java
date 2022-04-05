@@ -1,11 +1,15 @@
 --------------------------------------------------------------------------------------------------------------
 Sample Template how to connect, query, and extract from resultSet
 https://www.tutorialspoint.com/jdbc/jdbc-sample-code.htm
+https://www.tutorialspoint.com/jdbc/navigate-result-sets.htm
+SELECLT, UPdate, INSERT
+https://www.tutorialspoint.com/jdbc/updating-result-sets.htm
 --------------------------------------------------------------------------------------------------------------
 Create Connection to DB
 https://www.tutorialspoint.com/jdbc/jdbc-db-connections.htm
 --------------------------------------------------------------------------------------------------------------
-PreparedStatement https://www.tutorialspoint.com/jdbc/jdbc-statements.htm
+PreparedStatement 
+https://www.tutorialspoint.com/jdbc/jdbc-statements.htm
 
 Statement stmt = null;
 try {
@@ -19,6 +23,9 @@ finally {
    stmt.close();
 }
 --------------------------------------------------------------------------------------------------------------
+DATE für DB 
+Handling NULL Values
+https://www.tutorialspoint.com/jdbc/jdbc-data-types.htm
 --------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------
