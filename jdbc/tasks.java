@@ -27,6 +27,10 @@ DATE für DB
 Handling NULL Values
 https://www.tutorialspoint.com/jdbc/jdbc-data-types.htm
 --------------------------------------------------------------------------------------------------------------
+Check if ResultSet empty
+https://javarevisited.blogspot.com/2016/10/how-to-check-if-resultset-is-empty-in-Java-JDBC.html#axzz7Pg8WCySl
+https://www.javamadesoeasy.com/2015/11/how-to-get-lengthsize-of-resultset-in.html
+https://www.tutorialspoint.com/jdbc/jdbc-data-types.htm
 --------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------
