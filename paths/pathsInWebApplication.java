@@ -11,6 +11,9 @@ if(param == null || param.equals("")){
 	rd.forward(request, response);
 }
 -----------------------------------------------
+<a href="index.jsp"> //localhost:8080/project/index.jsp
+<a href="/index.jsp"> //localhost:8080/index.jsp
+-----------------------------------------------
 ${pageContext.request.requestURL} -- http://localhost:8080/geo-websocket/start.jsp 
 ${pageContext.request.requestURI} -- /geo-websocket/start.jsp 
 ${pageContext.request.contextPath} -- /geo-websocket 
