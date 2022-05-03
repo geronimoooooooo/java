@@ -14,9 +14,9 @@ if(param == null || param.equals("")){
 <a href="index.jsp"> //localhost:8080/project/index.jsp
 <a href="/index.jsp"> //localhost:8080/index.jsp
 -----------------------------------------------
-${pageContext.request.requestURL} -- http://localhost:8080/geo-websocket/start.jsp 
-${pageContext.request.requestURI} -- /geo-websocket/start.jsp 
-${pageContext.request.contextPath} -- /geo-websocket 
+${pageContext.request.requestURL} -- http://localhost:8080/project/start.jsp 
+${pageContext.request.requestURI} -- /project/start.jsp 
+${pageContext.request.contextPath} -- /project
 ${pageContext.request.serverName} -- localhost 
 ${pageContext.request.localPort} -- 8080 
 ${pageContext.request.scheme} -- http 
@@ -25,9 +25,9 @@ ${pageContext.request.scheme} -- http
 -----------------------------------------------
 <%
 System.out.println("inside scriptlet java gibt es nur 'request' aber kein 'pageContext'");
-System.out.println(request.getRequestURL()); http://localhost:8080/npbg-klima/ok.jsp
-System.out.println(request.getRequestURI()); /npbg-klima/ok.jsp
-System.out.println(request.getContextPath()); /npbg-klima
+System.out.println(request.getRequestURL()); http://localhost:8080/project/ok.jsp
+System.out.println(request.getRequestURI()); /project/ok.jsp
+System.out.println(request.getContextPath()); /project
 %>
 
 <a href="<%=request.getRequestURL() %>">=request.getRequestURL()</a><br> http://localhost:8080/npbg-klima/ok.jsp
@@ -38,6 +38,7 @@ System.out.println(request.getContextPath()); /npbg-klima
 <a href="${pageContext.request.contextPath}">pageContext.request.contextPath</a><br> http://localhost:8080/npbg-klima/
 <br>
 <a href ="${pageContext.request.contextPath}/stationen">{pageContext.request.contextPath}/stationen</a> http://localhost:8080/npbg-klima/stationen
+<a href="stationen">stationen</a> SIND IDENTISCH
 <br>
 <label>pageContext.request.requestURL: ${pageContext.request.requestURL}</label><br> http://localhost:8080/npbg-klima/ok.jsp
 <label>pageContext.request.requestURI: ${pageContext.request.requestURI}</label><br> /npbg-klima/ok.jsp
@@ -129,21 +130,6 @@ Chaträume befinden sich unter folgender Adresse: ${base_href}<b>'chatname'</b> 
 
 </body>
 </html>
-
-
-Um einem WebSocket Chatraumt beizutreten, den Chatnamen zur base WebSocket URL anhängen. 
-
- An die folgende Adresse werden Daten zum WebSocket geschickt: ws://localhost:8080/geo-websocket/'chatname' 
-
- Chaträume befinden sich unter folgender Adresse: http://localhost:8080/geo-websocket/'chatname' 
-
-Verfügbare WebSocket chats: 
-•/geofence ◦WebSocket Adresse: ws://localhost:8080/geo-websocket/geofence
-◦Chatraum Adresse: http://localhost:8080/geo-websocket/geofence
-
-•/chat_unloading
-•/iridium
-
 ##############################################################################################
 Wenn mit RequestDispatcher.forward() weiterleitet, um den Link von der Seite zu bekommen wo 
 request.getAttribute("javax.servlet.forward.request_uri")
