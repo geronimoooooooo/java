@@ -11,6 +11,19 @@ long endTime = System.nanoTime() - startTime;
 System.out.println("elapsed time in ms:" + endTime / 1000000);
 
 -----------------------------------------------------------------------------------
+Instant in = Instant.now();
+System.out.println(in); // 2021-09-22T10:17:16.862Z
+in = in.truncatedTo(ChronoUnit.SECONDS);
+System.out.println(in); // 2021-09-22T10:18:38Z		
+
+Date date1 = Date.from(in);
+System.out.println(date1); //
+
+LocalDateTime ldt = LocalDateTime.now();
+System.out.println(ldt); // 2021-09-22T12:18:38.243
+ldt = ldt.truncatedTo(ChronoUnit.SECONDS);
+System.out.println(ldt);// 2021-09-22T12:18:38
+-----------------------------------------------------------------------------------
 LocalDateTime oldDate = LocalDateTime.of(2016, Month.AUGUST, 31, 10, 20, 55);2016-08-31T10:20:55
 -----------------------------------------------------------------------------------
 Von Instant zu LocalDateTime:
