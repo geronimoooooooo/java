@@ -5,9 +5,8 @@ Examples
 
 long startTime = System.nanoTime();
 long startTime2 = System.currentTimeMillis();
-long var = System.nanoTime();
-long endVar = System.currentTimeMillis();
-long endTime = System.nanoTime() - startTime;
+long durationTime = System.nanoTime() - startTime;
+String duration = Long.toString(durationTime);
 System.out.println("elapsed time in ms:" + endTime / 1000000);
 
 -----------------------------------------------------------------------------------
