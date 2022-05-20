@@ -1,3 +1,9 @@
+https://jenkov.com/tutorials/java-logging/logger.html
+https://javabeginners.de/Allgemeines/Logging/Logging_mit_Properties-Datei.php
+https://mkyong.com/logging/logging-properties-example/
+
+
+---------------------------------
 java.util.logging.Logger logger =  java.util.logging.Logger.getLogger(this.getClass().getName());
 logger.info("This is an info message");
 logger.severe("This is an error message"); // == ERROR
