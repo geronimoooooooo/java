@@ -12,6 +12,7 @@ logger.fine("Here is a debug message");
 ---------------------------------
 FileHandler fileHandler = new FileHandler("status.log");
 fileHandler  = new FileHandler("./javacodegeeks.log"); //root directory of project
+fileHandler = new FileHandler("src/main/resources/MyLogFile.txt"); //relative path
 logger.addHandler(fileHandler);
 ---------------------------------
   package com.sematext.blog.logging;
