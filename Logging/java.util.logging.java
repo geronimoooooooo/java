@@ -1,3 +1,4 @@
+ALLES WAS MAN FÜR DEN START BRAUCHT: https://examples.javacodegeeks.com/core-java/util/logging/java-util-logging-example/
 https://jenkov.com/tutorials/java-logging/logger.html
 https://javabeginners.de/Allgemeines/Logging/Logging_mit_Properties-Datei.php
 https://mkyong.com/logging/logging-properties-example/
