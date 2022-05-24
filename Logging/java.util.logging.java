@@ -10,6 +10,7 @@ logger.severe("This is an error message"); // == ERROR
 logger.fine("Here is a debug message");
 ---------------------------------
 FileHandler fileHandler = new FileHandler("status.log");
+fileHandler  = new FileHandler("./javacodegeeks.log"); //root directory of project
 logger.addHandler(fileHandler);
 ---------------------------------
   package com.sematext.blog.logging;
