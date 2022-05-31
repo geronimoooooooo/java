@@ -1,3 +1,23 @@
+NOCH LESEN:
++ https://www.journaldev.com/977/logger-in-java-logging-example
++ https://stackoverflow.com/questions/9457976/java-logging-where-is-my-log-file
++ https://stackoverflow.com/questions/43284004/where-does-the-java-util-logging-log-file-or-output-go
++ https://stackoverflow.com/questions/5950557/good-examples-using-java-util-logging
++ https://www.vogella.com/tutorials/Logging/article.html
++ https://javabeginners.de/Allgemeines/Logging/Einfaches_Logging.php
++ https://examples.javacodegeeks.com/category/core-java/util/logging/
++ https://sematext.com/blog/java-logging/
++ https://www.delftstack.com/de/howto/java/java-log/
++ https://owlcation.com/stem/Java-Examples-Logging-with-FileHandler-and-SimpleFormatter
++ https://www.geeksforgeeks.org/logger-entering-method-in-java-with-examples/
++ https://stackoverflow.com/questions/10442664/logger-and-filehandler-in-java
+
++ http://www.javased.com/?api=java.util.logging.FileHandler
++ https://www.programcreek.com/java-api-examples/?api=java.util.logging.FileHandler
++ https://www.tabnine.com/code/java/classes/java.util.logging.FileHandler
++ https://sematext.com/blog/java-logging/#toc-logging-in-java-how-to-log-using-the-java-logging-api-7
+
+
 ALLES WAS MAN FÜR DEN START BRAUCHT: https://examples.javacodegeeks.com/core-java/util/logging/java-util-logging-example/
 https://jenkov.com/tutorials/java-logging/logger.html
 https://javabeginners.de/Allgemeines/Logging/Logging_mit_Properties-Datei.php
