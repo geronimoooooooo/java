@@ -1,4 +1,5 @@
 https://www.w3resource.com/java-exercises/
+https://www.codesdope.com/course/java-introduction/
 
 https://www.edureka.co/blog/advanced-java-tutorial
 
