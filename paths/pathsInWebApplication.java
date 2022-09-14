@@ -135,4 +135,12 @@ Wenn mit RequestDispatcher.forward() weiterleitet, um den Link von der Seite zu 
 request.getAttribute("javax.servlet.forward.request_uri")
 ${requestScope['javax.servlet.forward.request_uri']}
 
+##############################################################################################
+img in file: projectName/station/file.html
+relativ src="img/img.svg"  http://localhost:8080/projectName/station/img/img.svg
+absolut src="/img/img.svg"  http://localhost:8080/img/img.svg
+src="projectName/img/img.svg"  http://localhost:8080/projectName/station/npv-archiv/img.svg
+(works) src="/projectName/img/img.svg"  http://localhost:8080/projectName/img/img.svg
+
+absolut zum Server und nicht eigenem Projekt
 
