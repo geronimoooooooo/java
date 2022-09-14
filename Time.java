@@ -10,6 +10,10 @@ String duration = Long.toString(durationTime);
 System.out.println("elapsed time in ms:" + endTime / 1000000);
 
 -----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+compare Datum und Zeiten: https://howtodoinjava.com/java/date-time/compare-localdates/
+-----------------------------------------------------------------------------------
 Instant in = Instant.now();
 System.out.println(in); // 2021-09-22T10:17:16.862Z
 in = in.truncatedTo(ChronoUnit.SECONDS);
