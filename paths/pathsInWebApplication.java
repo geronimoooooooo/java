@@ -136,7 +136,7 @@ request.getAttribute("javax.servlet.forward.request_uri")
 ${requestScope['javax.servlet.forward.request_uri']}
 
 ##############################################################################################
-img in file: projectName/station/file.html
+img in file: projectName/station/file.html  und img in projectName/img/img.svg
 relativ src="img/img.svg"  http://localhost:8080/projectName/station/img/img.svg
 absolut src="/img/img.svg"  http://localhost:8080/img/img.svg
 src="projectName/img/img.svg"  http://localhost:8080/projectName/station/npv-archiv/img.svg
@@ -144,3 +144,5 @@ src="projectName/img/img.svg"  http://localhost:8080/projectName/station/npv-arc
 
 absolut zum Server und nicht eigenem Projekt
 
+wenn aber file und img ordner auf gleicher ebene, dann geht auch: img/img.svg
+##############################################################################################
