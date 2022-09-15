@@ -1,4 +1,18 @@
+From Servlet to JSP: ArrayList of Select/Option 
+https://metamug.com/article/jsp/jsp-select-option-list-index.html
 
+ArrayList countryList = new ArrayList();
+request.setAttribute("countryList", countryList);  
+request.getRequestDispatcher("/WEB-INF/country-selection.jsp").forward(request, response)
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<select name="country">
+  <c:forEach items="${countryList}" var="countryName" varStatus="loop">
+    <option value="${loop.index}">
+        ${countryName}
+    </option>
+  </c:forEach>
+</select>
 -----------------------------------
 -----------------------------------
 -----------------------------------
