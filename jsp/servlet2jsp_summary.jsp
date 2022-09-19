@@ -14,6 +14,18 @@ request.getRequestDispatcher("/WEB-INF/country-selection.jsp").forward(request, 
   </c:forEach>
 </select>
 -----------------------------------
+request.setAttribute("attr1", "someVar");
+RequestDispatcher rd;
+rd = getServletContext().getRequestDispatcher("newJSP.jsp");
+rd.forward(req, res);
+
+And this is my JSP:
+<HTML>
+<BODY><H3>Variable is:</H3>
+<% String Attr1 = (String)request.getAttribute("attr1"); %>
+<% = Attr1 %>
+</BODY>
+</HTML>
 -----------------------------------
 -----------------------------------
  <tr>
