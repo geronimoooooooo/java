@@ -1,0 +1,6 @@
+https://www.javaguides.net/p/spring-tutorial-beginners-to-expert.html
+https://www.frank-rahn.de/spring-boot-webanwendung-die-ersten-schritte-tutorial/
+https://www.baeldung.com/spring-tutorial
+https://www.w3schools.com/java/default.asp
+https://www.javatpoint.com/spring-tutorial
+https://www.tutorialspoint.com/spring/index.htm
