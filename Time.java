@@ -11,6 +11,23 @@ System.out.println("elapsed time in ms:" + endTime / 1000000);
 
 -----------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------
+ public static void main(String[] args) {
+    
+    double messZeitpunkteVorhanden = 3900;
+    
+    YearMonth monthsInYear = YearMonth.of(2022,2);
+
+    int daysInMonth = monthsInYear.lengthOfMonth();
+    int messZeitpunkteImMonat = daysInMonth *24*6;
+    System.out.println("days in month: "+daysInMonth +", und Anzahl Messzeitpunkte: "+messZeitpunkteImMonat);
+    
+    double percent = messZeitpunkteVorhanden/messZeitpunkteImMonat*100;
+    double fehlendeProzent = 100-percent;
+    int ceil = (int)Math.ceil(fehlendeProzent);
+    int floor = (int)Math.floor(fehlendeProzent);
+    System.out.println("Prozent: "+percent + "fehlende %: "+ fehlendeProzent);
+    System.out.println("ceil: "+ceil +", floor: "+floor);
+  }
 -----------------------------------------------------------------------------------
 compare Datum und Zeiten: https://howtodoinjava.com/java/date-time/compare-localdates/
 -----------------------------------------------------------------------------------
