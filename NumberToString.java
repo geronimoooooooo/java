@@ -7,6 +7,9 @@ StringVar = StringVar.replaceAll(",", "."); //10.45
 double doubleVar = Double.parseDouble(StringVar);
 
 String myDoubleAsAString = Double.toString(doubleVar);
+
+int i= 200;  
+String s = String.valueOf(i);
 #####################################################################################################
 200.3456 * 100 = 20034.56;  
 (int) 20034.56 = 20034;  
