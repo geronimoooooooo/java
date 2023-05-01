@@ -4,6 +4,9 @@ Noch besser ist es gleich einen Listener zu nutzen.
 	
 https://stackoverflow.com/questions/18808853/load-on-start-up-using-annotation-in-java
   
+Das nutzen 
+public void contextInitialized(ServletContextEvent arg0) 
+statt
 @Override
     public void init() throws ServletException {
         System.out.println("This is init load-on-startup from Tester");
