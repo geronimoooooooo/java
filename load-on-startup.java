@@ -3,6 +3,8 @@ dass doGet()aufgerufen wird. Ohne init() muss man noch immer ein GET aufs Servle
 Noch besser ist es gleich einen Listener zu nutzen.
 	
 https://stackoverflow.com/questions/18808853/load-on-start-up-using-annotation-in-java
+
+Scheduler erst nach 10 sec starten, da anonsten eine Exception kam.
   
 Das nutzen 
 public void contextInitialized(ServletContextEvent arg0) 
