@@ -1,3 +1,6 @@
+Button in einem Form schickt Daten an Servlet
+<td align="right">  <input formaction="<%=request.getContextPath()%>/ConfigurationHandler" formmethod="POST" type="submit" value="Save Configuration"/> </td>
+
 <a href=${pageContext.request.requestURL}service>${pageContext.request.requestURL}service</a>
 
 Klick auf Logo ruft startseite auf
