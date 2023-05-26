@@ -1,3 +1,8 @@
+
+
+Weiterleitung nach paar Sekunden
+<meta http-equiv="refresh" content="2; url=${pageContext.request.contextPath}/services">
+
 Button in einem Form schickt Daten an Servlet
 <td align="right">  <input formaction="<%=request.getContextPath()%>/ConfigurationHandler" formmethod="POST" type="submit" value="Save Configuration"/> </td>
 
@@ -5,6 +10,7 @@ Button in einem Form schickt Daten an Servlet
 
 Klick auf Logo ruft startseite auf
 <a href=${pageContext.request.requestURL}><img title="" src="img/focus_logo.png"  alt="Logo" ></a>
+<a href=${pageContext.request.contextPath}><img title="" src="img/THE4BEES_logo.png"  alt="Logo" ></a>
 -------------------------------------------------------------------------------------------------
 + Weiterleiten aus einem Servlet doGet() zu einem anderen Servlet doGet()
 RequestDispatcher rd = getServletContext().getRequestDispatcher("/insert");
