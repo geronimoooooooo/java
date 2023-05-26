@@ -1,3 +1,8 @@
+<a href=${pageContext.request.requestURL}service>${pageContext.request.requestURL}service</a>
+
+Klick auf Logo ruft startseite auf
+<a href=${pageContext.request.requestURL}><img title="" src="img/focus_logo.png"  alt="Logo" ></a>
+-------------------------------------------------------------------------------------------------
 + Weiterleiten aus einem Servlet doGet() zu einem anderen Servlet doGet()
 RequestDispatcher rd = getServletContext().getRequestDispatcher("/insert");
 rd.forward(request, response);
