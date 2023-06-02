@@ -1,3 +1,10 @@
+Link zur Startseite
+<header>
+	<div class="float-end">
+		<a href=${pageContext.request.contextPath} style="text-decoration: none;">Startseite</a>
+	</div>
+</header>
+-------------------------------------------------------------------------------------------------
 Back to start
 <div class="row">
 	<table class="tgneu" align="center">
