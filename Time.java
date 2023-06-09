@@ -195,5 +195,39 @@ System.out.println("execute() : "+ DateTimeHelper.date2String_T_Z_Format(datePas
 ---------------------------------------------------------------
 Date date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").parse("2012-05-20T09:00:00.000Z");
 ---------------------------------------------------------------
+    	Instant in = Instant.now();
+    	LocalDateTime ldt = LocalDateTime.now();
+    	LocalDateTime ldt2 = LocalDateTime.ofInstant(in, ZoneOffset.UTC);
+      LocalDateTime ldt3 = LocalDateTime.ofInstant(in, ZoneId.systemDefault());  
+      System.out.println("Instant:" +in);
+  		System.out.println("ldt:" +ldt);
+  		System.out.println("ldt ZoneOffset.UTC) :"+ldt2);
+      System.out.println("ldt ZoneId.systemDefault():" +ldt3);
+      ZonedDateTime ldtZoned = ldt.atZone(ZoneId.systemDefault());
+      System.out.println("ldtZoned: "+ldtZoned);
+      System.out.println("ldtZoned.toInstant(): "+ldtZoned.toInstant());
+      
+      ZonedDateTime utcZoned = ldtZoned.withZoneSameInstant(ZoneId.of("UTC"));
+
+      System.out.println("utcZoned: "+ utcZoned);
+      
+      LocalDateTime ldt5 = LocalDateTime.now();
+      System.out.println("ldt5: "+ldt5);
+      ZonedDateTime zdt = ldt5.atZone(ZoneId.systemDefault());
+      System.out.println("zdt: "+zdt);
+      Instant in5 = zdt.toInstant();
+      System.out.println("in5: "+in5);
+ 
+      
+      Instant in6= Instant.now();
+      LocalDateTime l = LocalDateTime.ofInstant(in6, ZoneId.systemDefault());
+      System.out.println(in6);
+      System.out.println(l);
+      
+      Instant in7 = in6.plus(30, ChronoUnit.DAYS);
+      System.out.println(in7);
+      Duration duration = Duration.between(LocalDateTime.ofInstant(in6, ZoneId.systemDefault()), LocalDateTime.ofInstant(in7, ZoneId.systemDefault()));
+      System.out.println(duration.toDays());
+
 ---------------------------------------------------------------
 ---------------------------------------------------------------
