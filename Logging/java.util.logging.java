@@ -1,3 +1,11 @@
+Die logging.properties Datei muss im lokalen Porjektordner im src/main/java sein
+src/main/java
++ handlerFolder
++ mainLogicFolder
++logging.properties
+
+The Java logging APIs (java.util.logging) default loads logging.properties in the $JAVA_HOME/jre/lib/ (Java 8 and before); for Java 9 and above, the logging.properties file moved to $JAVA_HOME/conf.
+
 NOCH LESEN:
 + https://www.journaldev.com/977/logger-in-java-logging-example
 + https://stackoverflow.com/questions/9457976/java-logging-where-is-my-log-file
