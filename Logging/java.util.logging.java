@@ -6,10 +6,16 @@ src/main/java
 
 The Java logging APIs (java.util.logging) default loads logging.properties in the $JAVA_HOME/jre/lib/ (Java 8 and before); for Java 9 and above, the logging.properties file moved to $JAVA_HOME/conf.
   
+  http://www.java2s.com/Code/Java/Language-Basics/LimitingtheSizeofaLogFile.htm
+  http://www.java2s.com/Code/Java/Language-Basics/LimitingtheSizeofaLogFile.htm
  https://mkyong.com/logging/how-to-load-logging-properties-for-java-util-logging/
   https://javabeginners.de/Allgemeines/Logging/Logging_mit_Properties-Datei.php
 https://www.logicbig.com/tutorials/core-java-tutorial/logging/loading-properties.html
 https://www.digitalocean.com/community/tutorials/logger-in-java-logging-example
+
+https://stackoverflow.com/questions/60868584/using-logger-with-a-file-size-limit-and-number-of-files-limit
+https://stackoverflow.com/questions/38154158/how-can-i-output-the-name-of-the-current-java-util-logging-logger-log-file-name/38207532#38207532
+https://www.tenable.com/audits/items/CIS_Apache_Tomcat_8_L2_v1.0.1.audit:45b9f63d5fdb1cf25e424884ffee2759
 
 NOCH LESEN:
 + https://www.journaldev.com/977/logger-in-java-logging-example
