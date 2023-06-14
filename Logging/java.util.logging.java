@@ -5,8 +5,11 @@ logger.setUseParentHandlers(false); damit vom parent und durch handler nicht .IN
 Es gibt eine Unterscheidung:
 + Erzeugen der Lognachricht
 + Ausgabe der Lognachricht (handler)
-Deswegen wird 2x setLevel() gebraucht. Ohne aktives Setzes, wird standard bis Level.INFO genommen.
+Deswegen wird 2x setLevel() gebraucht. Ohne aktives Setzes, wird standard bis Level.INFO genommen. Zur Ausgabe wird, wie oben angesprochen, 
+der Standard-ConsoleHandler verwendet. Greift man nicht verändernd ein, so sind sowohl der Logger als auch der Handler so konfiguriert, dass sie die Meldungen nur bis zum Level INFO ausgeben. 
   
+https://javabeginners.de/Allgemeines/Logging/Logging_mit_Properties-Datei.php
+Für diese Konfiguration ist eine Datei logging.properties verantwortlich, die sich im Verzeichnis lib des JRE befindet
 Die logging.properties Datei muss im lokalen Porjektordner im root folder sein
 src/main/java
 + handlerFolder
