@@ -1,8 +1,17 @@
+Logger logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+Logger.getAnonymousLogger()
+logger.setUseParentHandlers(false); damit vom parent und durch handler nicht .INFO 2x ausgegeben wird. Jetzt gibt nur handler aus.
+  
+Es gibt eine Unterscheidung:
++ Erzeugen der Lognachricht
++ Ausgabe der Lognachricht (handler)
+Deswegen wird 2x setLevel() gebraucht. Ohne aktives Setzes, wird standard bis Level.INFO genommen.
+  
 Die logging.properties Datei muss im lokalen Porjektordner im root folder sein
 src/main/java
 + handlerFolder
 + mainLogicFolder
-+logging.properties
++ logging.properties
 
 The Java logging APIs (java.util.logging) default loads logging.properties in the $JAVA_HOME/jre/lib/ (Java 8 and before); for Java 9 and above, the logging.properties file moved to $JAVA_HOME/conf.
   
