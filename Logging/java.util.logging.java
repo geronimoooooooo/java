@@ -1,3 +1,6 @@
+C:\Users\name\eclipse-workspace3\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\npv-archiv\WEB-INF\classes\klimaLogging.properties
+aktuell all log files in C:\DATA\DEV\eclipse-jee-2021-06-R-win32-x86_64\eclipse
+  
 Logger logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 Logger.getAnonymousLogger()
 logger.setUseParentHandlers(false); damit vom parent und durch handler nicht .INFO 2x ausgegeben wird. Jetzt gibt nur handler aus.
