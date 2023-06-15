@@ -16,6 +16,7 @@ src/main/java
 + mainLogicFolder
 + logging.properties
 
+Console handler of java.util.logging prints messages to System.err, and therefor Eclipse renders them red.
 The Java logging APIs (java.util.logging) default loads logging.properties in the $JAVA_HOME/jre/lib/ (Java 8 and before); for Java 9 and above, the logging.properties file moved to $JAVA_HOME/conf.
   
   http://www.java2s.com/Code/Java/Language-Basics/LimitingtheSizeofaLogFile.htm
