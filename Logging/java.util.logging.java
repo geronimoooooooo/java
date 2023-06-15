@@ -1,7 +1,11 @@
 Logger logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 Logger.getAnonymousLogger()
 logger.setUseParentHandlers(false); damit vom parent und durch handler nicht .INFO 2x ausgegeben wird. Jetzt gibt nur handler aus.
-  
+
+GUT: 
+https://www.logicbig.com/tutorials/core-java-tutorial/logging/customizing-default-format.html
+https://javabeginners.de/Allgemeines/Logging/Logging_mit_Properties-Datei.php
+
 Es gibt eine Unterscheidung:
 + Erzeugen der Lognachricht
 + Ausgabe der Lognachricht (handler)
@@ -16,8 +20,20 @@ src/main/java
 + mainLogicFolder
 + logging.properties
 
+Java.util.logger new file every day: https://stackoverflow.com/questions/30985882/java-util-logger-new-file-every-day
+https://stackoverflow.com/questions/9471019/how-do-i-add-logging-properties-to-the-classpath-of-an-eclipse-project: https://stackoverflow.com/questions/9471019/how-do-i-add-logging-properties-to-the-classpath-of-an-eclipse-project
+java.util.logging.FileHandler is not working after app is deployed to tomcat: https://stackoverflow.com/questions/72767003/java-util-logging-filehandler-is-not-working-after-app-is-deployed-to-tomcat
+java util logging.properties: How to log to two different files: https://stackoverflow.com/questions/3639694/java-util-logging-properties-how-to-log-to-two-different-files
+Where can I view Tomcat log files in Eclipse? https://stackoverflow.com/questions/2233053/where-can-i-view-tomcat-log-files-in-eclipse
+Where should I put logging.properties file for java.util.logging in web application (maven project)? https://stackoverflow.com/questions/4714767/where-should-i-put-logging-properties-file-for-java-util-logging-in-web-applicat
+
 Console handler of java.util.logging prints messages to System.err, and therefor Eclipse renders them red.
 The Java logging APIs (java.util.logging) default loads logging.properties in the $JAVA_HOME/jre/lib/ (Java 8 and before); for Java 9 and above, the logging.properties file moved to $JAVA_HOME/conf.
+  
+passed as JVM parameter ex : java -Djava.util.logging.config.file=/scratch/user/config/logging.properties
+System.out.println(getClass().getClassLoader().getResource("logging.properties"));
+System.out.println(ClassName.class.getClassLoader().getResource("logging.properties"));
+
   
   http://www.java2s.com/Code/Java/Language-Basics/LimitingtheSizeofaLogFile.htm
   http://www.java2s.com/Code/Java/Language-Basics/LimitingtheSizeofaLogFile.htm
