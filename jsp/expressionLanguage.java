@@ -18,6 +18,11 @@
     </td>
   </tr>
 ##############################################################################################
+<body>
+    <c:set var = "userid" scope = "session" value="${204}" />
+    The defined value in the session scope is: <c:out value = "${userid}"/>
+</body>
+##############################################################################################
 <!-- if elseif else -->
 <c:choose>
    <c:when test="${s.getLastRequestDate()==null}">else if</c:when> 
