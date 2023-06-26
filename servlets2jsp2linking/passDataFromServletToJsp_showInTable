@@ -1,1 +1,21 @@
 https://www.geeksforgeeks.org/getattribute-passing-data-from-server-to-jsp/?ref=rp
+#################################################################################
+Im Servlet
+String[] myArray = {"Element 1", "Element 2", "Element 3"};
+request.setAttribute("myArray", myArray);
+
+RequestDispatcher dispatcher = request.getRequestDispatcher("yourJspPage.jsp");
+dispatcher.forward(request, response);
+
+
+Im JSP
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<c:forEach var="element" items="${myArray}">
+  <c:out value="${element}" /><br/>
+</c:forEach>
+#################################################################################
+#################################################################################
+#################################################################################
+#################################################################################
+
