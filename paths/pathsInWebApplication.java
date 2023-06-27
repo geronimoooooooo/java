@@ -1,4 +1,5 @@
 ="/path/to/script.js"   is an absolute path to the script from the site root
+relative path from the current page. For instance, src="script.js", just like src="./script.js", would mean a file "script.js" in the current folder.
 -------------------------------------------------------------------------------------------------
 Link zur Startseite
 <header>
