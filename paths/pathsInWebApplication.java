@@ -1,3 +1,5 @@
+="/path/to/script.js"   is an absolute path to the script from the site root
+-------------------------------------------------------------------------------------------------
 Link zur Startseite
 <header>
 	<div class="float-end">
