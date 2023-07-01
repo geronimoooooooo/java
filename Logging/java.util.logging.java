@@ -1,3 +1,16 @@
+https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaLogging.html
+https://www.digitalocean.com/community/tutorials/logger-in-java-logging-example
+https://www.logicbig.com/tutorials/core-java-tutorial/logging/loading-properties.html
+https://stackoverflow.com/questions/13382679/java-logging-opening-too-many-logfiles
+https://stackoverflow.com/questions/13306014/setting-java-util-logging-config-file-at-runtime?rq=3
+https://stackoverflow.com/questions/16772188/specify-custom-logging-properties-under-tomcat/16772478#16772478
+https://stackoverflow.com/questions/960099/how-to-set-up-java-logging-using-a-properties-file-java-util-logging
+https://stackoverflow.com/questions/805701/load-java-util-logging-config-file-for-default-initialization
+https://stackoverflow.com/questions/39961593/java-configure-custom-loggers-for-use
+https://stackoverflow.com/questions/4714767/where-should-i-put-logging-properties-file-for-java-util-logging-in-web-applicat
+https://mkyong.com/logging/how-to-load-logging-properties-for-java-util-logging/
+
+--------------------------------
 C:\Users\name\eclipse-workspace3\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\npv-archiv\WEB-INF\classes\klimaLogging.properties
 aktuell all log files in C:\DATA\DEV\eclipse-jee-2021-06-R-win32-x86_64\eclipse
   
