@@ -1,3 +1,4 @@
+https://javabeginners.de/Allgemeines/Logging/Logging_mit_Properties-Datei.php
 https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaLogging.html
 https://www.digitalocean.com/community/tutorials/logger-in-java-logging-example
 https://www.logicbig.com/tutorials/core-java-tutorial/logging/loading-properties.html
