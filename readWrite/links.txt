@@ -1,0 +1,2 @@
+https://www.baeldung.com/java-properties
+https://mkyong.com/java/java-read-a-file-from-resources-folder/
