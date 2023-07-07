@@ -1,2 +1,4 @@
 https://www.baeldung.com/java-properties
 https://mkyong.com/java/java-read-a-file-from-resources-folder/
+https://stackoverflow.com/questions/51645295/how-to-specify-the-path-for-getresourceasstream-method-in-java
+https://www.tutorialspoint.com/java/util/java_util_properties.htm
