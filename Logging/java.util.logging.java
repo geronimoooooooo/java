@@ -1,3 +1,10 @@
+https://stackoverflow.com/questions/25532155/simpleformatter-ignoring-the-java-util-logging-simpleformatter-format-property
+https://jenkov.com/tutorials/java-logging/filters.html
+https://javabeginners.de/Allgemeines/Logging/Logging_mit_Properties-Datei.php
+
+https://mkyong.com/logging/logging-properties-example/
+https://mkyong.com/logging/how-to-load-logging-properties-for-java-util-logging/
+
 https://javabeginners.de/Allgemeines/Logging/Logging_mit_Properties-Datei.php
 https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaLogging.html
 https://www.digitalocean.com/community/tutorials/logger-in-java-logging-example
