@@ -65,6 +65,10 @@ System.out.println(request.getRequestURI()); /project/ok.jsp
 System.out.println(request.getContextPath()); /project
 %>
 
+im Servlet
+out.println("<a href='log/"+ stationImportingData.nameLogdatei +"'>Logdatei</a>" );
+out.println("<a href="+request.getContextPath()+">Startseite</a> <a href="+request.getContextPath()+"/station/"+stationImportingData.getName().toLowerCase()+".jsp>"+stationImportingData.getName()+"</a>" );
+
 <a href="<%=request.getRequestURL() %>">=request.getRequestURL()</a><br> http://localhost:8080/npbg-klima/ok.jsp
 <a href="<%=request.getRequestURI() %>">=request.getRequestURI()</a><br> http://localhost:8080/npbg-klima/ok.jsp
 <a href="<%=request.getContextPath() %>">=request.getContextPath()</a><br> http://localhost:8080/npbg-klima
