@@ -230,4 +230,7 @@ Date date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").parse("2012-05-
       System.out.println(duration.toDays());
 
 ---------------------------------------------------------------
+Expected :2020-10-10T15:16
+Actual   :2020-10-10T15:16:00
+https://stackoverflow.com/questions/65124679/how-to-format-localdatetime-with-minutes-only-truncate-seconds
 ---------------------------------------------------------------
