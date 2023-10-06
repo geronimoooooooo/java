@@ -234,3 +234,9 @@ Expected :2020-10-10T15:16
 Actual   :2020-10-10T15:16:00
 https://stackoverflow.com/questions/65124679/how-to-format-localdatetime-with-minutes-only-truncate-seconds
 ---------------------------------------------------------------
+System.out.println(LocalDateTime.now().truncatedTo(ChronoUnit.MILLIS));
+2023-10-06T17:25:35.401
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSS");
+System.out.println(LocalDateTime.now().format(formatter));
+2023-10-06T17:25:41.3104
+	
