@@ -241,36 +241,36 @@ System.out.println(LocalDateTime.now().format(formatter));
 2023-10-06T17:25:41.3104
 
 ####################################################################
-					NodeList textTSVList = tsvMeasTimeElement.getChildNodes();
-					// System.out.print( "\n" +
-					// ((Node)textTSVList.item(0)).getNodeValue().trim() ); // optionale
-					// Ausgabe des eingelesenen Zeitpunkts auf den Bildschirm
+NodeList textTSVList = tsvMeasTimeElement.getChildNodes();
+// System.out.print( "\n" +
+// ((Node)textTSVList.item(0)).getNodeValue().trim() ); // optionale
+// Ausgabe des eingelesenen Zeitpunkts auf den Bildschirm
 
-					String date = ((Node) textTSVList.item(0)).getNodeValue().trim().toString();
+String date = ((Node) textTSVList.item(0)).getNodeValue().trim().toString();
 
-					// ... fuer die weitere Prozessierung sinnvoll formatiert ...
-					String date_year = date.substring(0, 4);
-					String date_month = date.substring(5, 7);
-					String date_day = date.substring(8, 10);
-					String date_hour = date.substring(11, 13);
-					String date_minute = date.substring(14, 16);
-					String date_second = date.substring(17, 19);
-					// System.out.println ( "\n" + date + " " + date_year + " " +
-					// date_month + " " + date_day + " " + date_hour + " " + date_minute +
-					// " " + date_second ); // optionale Bildschirmausgabe
+// ... fuer die weitere Prozessierung sinnvoll formatiert ...
+String date_year = date.substring(0, 4);
+String date_month = date.substring(5, 7);
+String date_day = date.substring(8, 10);
+String date_hour = date.substring(11, 13);
+String date_minute = date.substring(14, 16);
+String date_second = date.substring(17, 19);
+// System.out.println ( "\n" + date + " " + date_year + " " +
+// date_month + " " + date_day + " " + date_hour + " " + date_minute +
+// " " + date_second ); // optionale Bildschirmausgabe
 
-					// ... und in die zu erzeugende Ausgabedatei geschrieben
-					// output.write ( date_hour + date_minute + date_second + date_day +
-					// date_month + date_year );
-					// System.out.println("Ausgangsdatei geschrieben: " + date_hour + date_minute + date_second + date_day +
-					// date_month + date_year);
+// ... und in die zu erzeugende Ausgabedatei geschrieben
+// output.write ( date_hour + date_minute + date_second + date_day +
+// date_month + date_year );
+// System.out.println("Ausgangsdatei geschrieben: " + date_hour + date_minute + date_second + date_day +
+// date_month + date_year);
 
-					// System.out.println("Messzeitpunkte: "+ date_year + date_month + date_day + date_hour + date_minute +
-					// date_second );
+// System.out.println("Messzeitpunkte: "+ date_year + date_month + date_day + date_hour + date_minute +
+// date_second );
 
-					// ----------------------------------------------------------------
-					// Je Messzeitpunkt werden über eine geschachtelte Schleife saemtliche
-					// gemessenen Parameter eingelesen ...
+// ----------------------------------------------------------------
+// Je Messzeitpunkt werden über eine geschachtelte Schleife saemtliche
+// gemessenen Parameter eingelesen ...
 ####################################################################
 ####################################################################
 ####################################################################
