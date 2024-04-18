@@ -1,3 +1,6 @@
+https://medium.com/elca-it/how-to-get-time-zones-right-with-java-8dea13aabe5c
+set date time zone
+#########################
 Seit Java8:
 Examples
 + http://www.journaldev.com/2800/java-8-date-time-api-example-tutorial-localdate-instant-localdatetime-parse-and-format
