@@ -1,3 +1,6 @@
+Date to String with DateTimeFormatter
+https://stackoverflow.com/questions/42210257/java-util-date-to-string-using-datetimeformatter
+
 https://medium.com/elca-it/how-to-get-time-zones-right-with-java-8dea13aabe5c
 set date time zone
 #########################
