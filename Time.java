@@ -278,6 +278,7 @@ String date_second = date.substring(17, 19);
 // Je Messzeitpunkt werden über eine geschachtelte Schleife saemtliche
 // gemessenen Parameter eingelesen ...
 ####################################################################
+YYYY-MM-DD"T"HH24:MI:SS"Z" in Oracle NLS zeigt in Spalte Datum die standard Z ISO Zeit an
 ####################################################################
 ####################################################################
 ####################################################################
