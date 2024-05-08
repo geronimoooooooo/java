@@ -280,8 +280,22 @@ String date_second = date.substring(17, 19);
 ####################################################################
 YYYY-MM-DD"T"HH24:MI:SS"Z" in Oracle NLS zeigt in Spalte Datum die standard Z ISO Zeit an
 ####################################################################
+	Parse String into LocalDateTime with DateTimeFormatter
+
+String dateString = "2020-04-08 12:30";
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+LocalDateTime parsedDateTime = LocalDateTime.parse(dateString, formatter);
+System.out.println(parsedDateTime);		//2020-04-08T12:30
 ####################################################################
+	LocalDateTime to String with DateTimeFormatter
+		
+//Format a date
+LocalDateTime myDateObj = LocalDateTime.now();
+DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
+String formattedDate = myDateObj.format(myFormatObj);
+System.out.println(formattedDate);	//	03-05-2020 13:46
 ####################################################################
+	Measure Elapsed Time mit Instant: https://howtodoinjava.com/java/date-time/intro-to-date-time-api/
 ####################################################################
 ####################################################################
 
