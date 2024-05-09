@@ -305,6 +305,7 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 	LocalDateTime newDateTime = currentDateTime.plusDays(7);
 	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 	String formattedDateTime = currentDateTime.format(formatter);
+	LocalDateTime ldt3 = LocalDateTime.ofInstant(Instant.now(), ZoneOffset.UTC).truncatedTo(ChronoUnit.SECONDS);
 
 + ZonedDateTime represents date and time in a particular time zone. Includes info about the time offset from UTC.
 	daylight saving time (DST) wird beachtet.
