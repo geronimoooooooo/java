@@ -297,6 +297,51 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 ####################################################################
 	Measure Elapsed Time mit Instant: https://howtodoinjava.com/java/date-time/intro-to-date-time-api/
 ####################################################################
+	https://medium.com/@hoangxuantoank13/a-simple-way-to-pocket-date-time-in-java-8-0b0288b73452
+
++ LocalDateTime class represents date and time without any time zone information
+	LocalDateTime localDateTime = LocalDateTime.parse("2015-02-20T06:30:00");
+	LocalDateTime currentDateTime = LocalDateTime.now();
+	LocalDateTime newDateTime = currentDateTime.plusDays(7);
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+	String formattedDateTime = currentDateTime.format(formatter);
+
++ ZonedDateTime represents date and time in a particular time zone. Includes info about the time offset from UTC.
+	daylight saving time (DST) wird beachtet.
+	zdt objekt = ldt + zoneId
+	// Using LocalDateTime and ZoneId
+	LocalDateTime localDateTime = LocalDateTime.of(2023, 11, 6, 14, 30);
+	ZoneId zoneId = ZoneId.of("America/New_York");
+	ZonedDateTime zonedDateTime = ZonedDateTime.of(localDateTime, zoneId);
+	// parse a string
+	ZonedDateTime zonedDateTime = ZonedDateTime.parse("2015-05-03T10:15:30+01:00[Europe/Paris]");
+	ZonedDateTime currentDateTime = ZonedDateTime.now(ZoneId.of("Europe/London"));
+
+	ZonedDateTime newDateTime = currentDateTime.plusDays(7);	
+	// Truncate to the nearest hour
+	ZonedDateTime originalDateTime = ZonedDateTime.now(ZoneId.of("America/New_York"));
+	ZonedDateTime truncatedDateTime = originalDateTime.truncatedTo(ChronoUnit.HOURS);	
+	// Compare if dateTime1 is before dateTime2
+	ZonedDateTime dateTime1 = ZonedDateTime.now(ZoneId.of("America/New_York"));
+	ZonedDateTime dateTime2 = ZonedDateTime.now(ZoneId.of("Europe/London")).plusHours(2);
+	boolean isBefore = dateTime1.isBefore(dateTime2);
+	
+	ZonedDateTime originalDateTime = ZonedDateTime.now(ZoneId.of("America/New_York"));
+	// Change to a different time zone (e.g., Europe/London) while keeping the same instant
+	ZonedDateTime newDateTime = originalDateTime.withZoneSameInstant(ZoneId.of("Europe/London"));
+	// Change the time zone without changing the instant
+	ZonedDateTime updatedDateTime = originalDateTime.withZoneSameLocal(ZoneId.of("Europe/London"));
+
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss z");
+	String formattedDateTime = currentDateTime.format(formatter);
+
++ ZoneId class represents a time zone; convert datetime between timezones
+	ZoneId zoneParis = ZoneId.of("Europe/Paris");
+	ZoneId.systemDefault()
+		
++ ZoneOffset class represents a fixed time offset (difference in hours/mins between a specific time zone and UTC) from UTC.
+		ZoneOffset offset = ZoneOffset.ofHours(3);
+	ZoneOffset utcOffset = ZoneOffset.UTC;
 ####################################################################
 
 	
