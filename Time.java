@@ -298,6 +298,7 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 	Measure Elapsed Time mit Instant: https://howtodoinjava.com/java/date-time/intro-to-date-time-api/
 ####################################################################
 	https://medium.com/@hoangxuantoank13/a-simple-way-to-pocket-date-time-in-java-8-0b0288b73452
+	Overview diagram zu den Klassen: https://miro.medium.com/v2/resize:fit:1400/format:webp/0*EpMHWU1U8JOHeix4.png
 
 + LocalDateTime class represents date and time without any time zone information
 	LocalDateTime localDateTime = LocalDateTime.parse("2015-02-20T06:30:00");
@@ -343,7 +344,28 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 + ZoneOffset class represents a fixed time offset (difference in hours/mins between a specific time zone and UTC) from UTC.
 		ZoneOffset offset = ZoneOffset.ofHours(3);
 	ZoneOffset utcOffset = ZoneOffset.UTC;
-####################################################################
 
++ OffsetDateTime class represents a datetime with a fixed offset from UTC. Passend für Situationen wo z.B. daylight saving time (DST) nicht relevant. z.B. fixe UTC+1 MDS
+	offsetDateTime = ldt + ZoneOffSet
+	LocalDateTime localDateTime = LocalDateTime.of(2023, 11, 6, 14, 30);
+	ZoneOffset zoneOffset = ZoneOffset.ofHours(3);  // For UTC+03:00
+	OffsetDateTime offsetDateTime = OffsetDateTime.of(localDateTime, zoneOffset);
+	OffsetDateTime mdsDateTime = OffsetDateTime.now(ZoneOffset.ofHours(1));  // For UTC+01:00
+	
+	// Parse a string
+	OffsetDateTime offsetDateTime = OffsetDateTime.parse("2023-11-06T14:30:00+03:00");
+	OffsetDateTime originalDateTime = OffsetDateTime.now();
+
+	// Change to a different offset (e.g., UTC+02:00)
+	OffsetDateTime newDateTime = originalDateTime.withOffsetSameInstant(ZoneOffset.ofHours(2));
+	// Change the offset without changing the instant
+	OffsetDateTime updatedDateTime = originalDateTime.withOffsetSameLocal(ZoneOffset.ofHours(2));
+
++ Instant class liefert UTC Zeit,
+	Instant currentInstant = Instant.now();
+	Instant instantFromZonedDateTime = zonedDateTime.toInstant(); date.toInstant()
+
+####################################################################
+"yyyy-MM-dd HH:mm:ssXXX" 2024-05-09 23:35:08+01:00 wenn objekt timezone info hat, wie z.B. OffsetDateTime, ZonedDateTime
 	
 	
