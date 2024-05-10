@@ -149,6 +149,12 @@ public String getCurrentTimeStamp() {
 System.out.println(LocalDateTime.now().truncatedTo(ChronoUnit.MILLIS)); 2023-10-06T17:25:35.401
 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSS");
 System.out.println(LocalDateTime.now().format(formatter)); 2023-10-06T17:25:41.3104
+	LocalDateTime localDateTime = LocalDateTime.of(2024, 5, 9, 10, 30);
+        // Create a ZonedDateTime from the LocalDateTime with a specific time zone (UTC)
+	ZonedDateTime zonedDateTimeUTC = ZonedDateTime.of(localDateTime, ZoneId.of("UTC"));
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss z");
+        String formattedDateTime = formatter.format(zonedDateTimeUTC);
+        System.out.println("Formatted date and time in UTC: " + formattedDateTime);
 	
 G   Era designator  Text    AD
 y   Year    Year    1996; 96
@@ -297,7 +303,7 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 	Overview diagram zu den Klassen: https://miro.medium.com/v2/resize:fit:1400/format:webp/0*EpMHWU1U8JOHeix4.png
 
 + LocalDateTime class represents date and time without any time zone information	
-	.withZone() hat keinen Effekt auf ldt, sondern nur auf ZonedDateTime und OffsetDateTime
+	.withZone() hat keinen Effekt auf ldt, sondern nur auf ZonedDateTime und OffsetDateTime. Zeit die Zeitzone im time String an.
 	LocalDateTime localDateTime = LocalDateTime.parse("2015-02-20T06:30:00");
 	LocalDateTime currentDateTime = LocalDateTime.now();
 	LocalDateTime newDateTime = currentDateTime.plusDays(7);
@@ -306,7 +312,7 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 	LocalDateTime ldt3 = LocalDateTime.ofInstant(Instant.now(), ZoneOffset.UTC).truncatedTo(ChronoUnit.SECONDS);
 
 + ZonedDateTime represents date and time in a particular time zone. Includes info about the time offset from UTC.
-	daylight saving time (DST) wird beachtet. .withZone() hat keinen Effekt auf ldt, sondern nur auf ZonedDateTime und OffsetDateTime
+	daylight saving time (DST) wird beachtet. .withZone() hat keinen Effekt auf ldt, sondern nur auf ZonedDateTime und OffsetDateTime. Zeit die Zeitzone im time String an.
 	zdt objekt = ldt + zoneId
 	// Using LocalDateTime and ZoneId
 	LocalDateTime localDateTime = LocalDateTime.of(2023, 11, 6, 14, 30);
@@ -345,7 +351,7 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 	ZoneOffset utcOffset = ZoneOffset.UTC; //ZoneOffset.UTC returns a mere ZoneOffset with ID "Z", offset of 0 and default zone rules.
 
 + OffsetDateTime class represents a datetime with a fixed offset from UTC. Passend für Situationen wo z.B. daylight saving time (DST) nicht relevant. z.B. fixe UTC+1 MDS
-	.withZone() hat keinen Effekt auf ldt, sondern nur auf ZonedDateTime und OffsetDateTime
+	.withZone() hat keinen Effekt auf ldt, sondern nur auf ZonedDateTime und OffsetDateTime. Zeit die Zeitzone im time String an.
 	offsetDateTime = ldt + ZoneOffSet
 	LocalDateTime localDateTime = LocalDateTime.of(2023, 11, 6, 14, 30);
 	ZoneOffset zoneOffset = ZoneOffset.ofHours(3);  // For UTC+03:00
@@ -378,3 +384,6 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 		Date date = formatter.parse(dateInString);
 		String formattedDateString = formatter.format(date);
 		TimeZone.setDefault(TimeZone.getTimeZone("GMT"));
+
++ .withZone() hat keinen Effekt auf ldt, sondern nur auf ZonedDateTime und OffsetDateTime. Zeit die Zeitzone im time String an.
+	2024-05-09 10:30:00 UTC+01:00
