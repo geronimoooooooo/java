@@ -1,8 +1,18 @@
+
+### HOW TO DO #################################################################
+### FORMATTING STRINGS ###########################################################
+### SUBSTRING #################################################################
+### CONVERTING #################################################################
+### KLASSEN ################################################################
+
+### HOW TO DO #################################################################
+Measure Elapsed Time mit Instant: https://howtodoinjava.com/java/date-time/intro-to-date-time-api/
 Date to String with DateTimeFormatter
 https://stackoverflow.com/questions/42210257/java-util-date-to-string-using-datetimeformatter
 
 https://medium.com/elca-it/how-to-get-time-zones-right-with-java-8dea13aabe5c
 set date time zone
++ Wenn Sekunden bei der Zeit fehlen, dann StringFormatter mit SS nutzen
 #########################
 Seit Java8:
 Examples
@@ -38,25 +48,21 @@ System.out.println("elapsed time in ms:" + endTime / 1000000);
 -----------------------------------------------------------------------------------
 compare Datum und Zeiten: https://howtodoinjava.com/java/date-time/compare-localdates/
 -----------------------------------------------------------------------------------
-Instant in = Instant.now();
-System.out.println(in); // 2021-09-22T10:17:16.862Z
-in = in.truncatedTo(ChronoUnit.SECONDS);
-System.out.println(in); // 2021-09-22T10:18:38Z		
+Instant in = Instant.now(); // 2024-05-09T23:37:10.050083400Z
+in = in.truncatedTo(ChronoUnit.SECONDS);// 2021-09-22T10:18:38Z		
 
 Date date1 = Date.from(in);
 System.out.println(date1); //
 
-LocalDateTime ldt = LocalDateTime.now();
-System.out.println(ldt); // 2021-09-22T12:18:38.243
-ldt = ldt.truncatedTo(ChronoUnit.SECONDS);
-System.out.println(ldt);// 2021-09-22T12:18:38
+LocalDateTime ldt = LocalDateTime.now(); // 2021-09-22T12:18:38.243
+ldt = ldt.truncatedTo(ChronoUnit.SECONDS); // 2021-09-22T12:18:38
 -----------------------------------------------------------------------------------
-LocalDateTime oldDate = LocalDateTime.of(2016, Month.AUGUST, 31, 10, 20, 55);2016-08-31T10:20:55
+LocalDateTime oldDate = LocalDateTime.of(2016, Month.AUGUST, 31, 10, 20, 55); //2016-08-31T10:20:55
 -----------------------------------------------------------------------------------
 Von Instant zu LocalDateTime:
 	Instant in = Instant.now(); 2022-03-29T12:39:08.052Z
 	LocalDateTime ldt = LocalDateTime.now(); 2022-03-29T14:39:08.052
-	LocalDateTime ldt2 = LocalDateTime.ofInstant(in, ZoneOffset.UTC);2022-03-29T12:39:08.052 UTC Zeit aber ohne Z hinten
+	LocalDateTime ldt2 = LocalDateTime.ofInstant(in, ZoneOffset.UTC); 2022-03-29T12:39:08.052 UTC Zeit aber ohne Z hinten
 	LocalDateTime ldt3 = LocalDateTime.ofInstant(in, ZoneId.systemDefault());  2022-03-29T14:39:08.052
 		
 Von LocalDateTime zu Instant mit UTC Z (geht nur über ZonedDateTime):	
@@ -139,6 +145,11 @@ public String getCurrentTimeStamp() {
     return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date());
 }
 ---------------------------------------------------------------
+### FORMATTING STRINGS ##########################################################################
+System.out.println(LocalDateTime.now().truncatedTo(ChronoUnit.MILLIS)); 2023-10-06T17:25:35.401
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSS");
+System.out.println(LocalDateTime.now().format(formatter)); 2023-10-06T17:25:41.3104
+	
 G   Era designator  Text    AD
 y   Year    Year    1996; 96
 Y   Week year   Year    2009; 09
@@ -161,7 +172,8 @@ S   Millisecond Number  978
 z   Time zone   General time zone   Pacific Standard Time; PST; GMT-08:00
 Z   Time zone   RFC 822 time zone   -0800
 X   Time zone   ISO 8601 time zone  -08; -0800; -08:00
-Examples:
+
+	Examples:
 
 "yyyy.MM.dd G 'at' HH:mm:ss z"  2001.07.04 AD at 12:08:56 PDT
 "EEE, MMM d, ''yy"  Wed, Jul 4, '01
@@ -174,6 +186,9 @@ Examples:
 "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"   2001-07-04T12:08:56.235-0700
 "yyyy-MM-dd'T'HH:mm:ss.SSSXXX"   2001-07-04T12:08:56.235-07:00
 "YYYY-'W'ww-u"  2001-W27-3
+"yyyy-MM-dd HH:mm:ssXXX" 2024-05-09 23:35:08+01:00 wenn objekt timezone info hat, wie z.B. OffsetDateTime, ZonedDateTime
+YYYY-MM-DD"T"HH24:MI:SS"Z" in Oracle NLS zeigt in Spalte Datum die standard Z ISO Zeit an
+("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").parse("2012-05-20T09:00:00.000Z");
 ---------------------------------------------------------------
 http://stackoverflow.com/questions/4772425/change-date-format-in-a-java-string
 ---------------------------------------------------------------
@@ -183,23 +198,11 @@ long endTime = System.nanoTime() - startTime;
 System.out.println("elapsed time:" + endTime / 1000000);
 --------------------------------------------------------------
 ---------------------------------------------------------------
-show actual time in jsp
-<%@page import="utility.DateTimeHelper"%>
-<%@page import="java.util.Date"%>
 
-<%
-Date date = new Date();
-String currentDate = DateTimeHelper.date2String_T_Z_Format(date);
-%>
 <input id="_endDate" type="text" name="_endDate" size="65" placeholder="provide a end date" value="<%= currentDate %>"   />    </td>
 ---------------------------------------------------------------
-Date dateNow = new Date();
-System.out.println("execute() nowTime: "+ DateTimeHelper.date2String_T_Z_Format(dateNow));
-Date datePast = new Date(dateNow.getTime()-(1000*60*sdio.timeRepeatInterval)); //ms * seconds * minutes
-System.out.println("execute() : "+ DateTimeHelper.date2String_T_Z_Format(datePast));
----------------------------------------------------------------
----------------------------------------------------------------
-Date date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").parse("2012-05-20T09:00:00.000Z");
+
+
 ---------------------------------------------------------------
     	Instant in = Instant.now();
     	LocalDateTime ldt = LocalDateTime.now();
@@ -240,13 +243,9 @@ Expected :2020-10-10T15:16
 Actual   :2020-10-10T15:16:00
 https://stackoverflow.com/questions/65124679/how-to-format-localdatetime-with-minutes-only-truncate-seconds
 ---------------------------------------------------------------
-System.out.println(LocalDateTime.now().truncatedTo(ChronoUnit.MILLIS));
-2023-10-06T17:25:35.401
-DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSS");
-System.out.println(LocalDateTime.now().format(formatter));
-2023-10-06T17:25:41.3104
 
-####################################################################
+
+### SUBSTRING #################################################################
 NodeList textTSVList = tsvMeasTimeElement.getChildNodes();
 // System.out.print( "\n" +
 // ((Node)textTSVList.item(0)).getNodeValue().trim() ); // optionale
@@ -277,26 +276,23 @@ String date_second = date.substring(17, 19);
 // ----------------------------------------------------------------
 // Je Messzeitpunkt werden über eine geschachtelte Schleife saemtliche
 // gemessenen Parameter eingelesen ...
-####################################################################
-YYYY-MM-DD"T"HH24:MI:SS"Z" in Oracle NLS zeigt in Spalte Datum die standard Z ISO Zeit an
-####################################################################
-	Parse String into LocalDateTime with DateTimeFormatter
 
+### CONVERTING #################################################################
+------------------- Parse String into LocalDateTime with DateTimeFormatter
 String dateString = "2020-04-08 12:30";
 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 LocalDateTime parsedDateTime = LocalDateTime.parse(dateString, formatter);
 System.out.println(parsedDateTime);		//2020-04-08T12:30
-####################################################################
-	LocalDateTime to String with DateTimeFormatter
-		
+
+------------------ LocalDateTime to String with DateTimeFormatter		
 //Format a date
 LocalDateTime myDateObj = LocalDateTime.now();
 DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
 String formattedDate = myDateObj.format(myFormatObj);
 System.out.println(formattedDate);	//	03-05-2020 13:46
-####################################################################
-	Measure Elapsed Time mit Instant: https://howtodoinjava.com/java/date-time/intro-to-date-time-api/
-####################################################################
+
+
+### KLASSEN ################################################################
 	https://medium.com/@hoangxuantoank13/a-simple-way-to-pocket-date-time-in-java-8-0b0288b73452
 	Overview diagram zu den Klassen: https://miro.medium.com/v2/resize:fit:1400/format:webp/0*EpMHWU1U8JOHeix4.png
 
@@ -363,9 +359,11 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 
 + Instant class liefert UTC Zeit,
 	Instant currentInstant = Instant.now();
-	Instant instantFromZonedDateTime = zonedDateTime.toInstant(); date.toInstant()
+	Instant instantFromZonedDateTime = zonedDateTime.toInstant(); date.toInstant()	
 
-####################################################################
-"yyyy-MM-dd HH:mm:ssXXX" 2024-05-09 23:35:08+01:00 wenn objekt timezone info hat, wie z.B. OffsetDateTime, ZonedDateTime
-	
-	
++ Date class
+	Date date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").parse("2012-05-20T09:00:00.000Z");
+	Date dateNow = new Date();
+	System.out.println("execute() nowTime: "+ DateTimeHelper.date2String_T_Z_Format(dateNow));
+	Date datePast = new Date(dateNow.getTime()-(1000*60*sdio.timeRepeatInterval)); //ms * seconds * minutes
+	System.out.println("execute() : "+ DateTimeHelper.date2String_T_Z_Format(datePast));
