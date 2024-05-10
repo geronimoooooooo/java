@@ -314,6 +314,8 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 	// parse a string
 	ZonedDateTime zonedDateTime = ZonedDateTime.parse("2015-05-03T10:15:30+01:00[Europe/Paris]");
 	ZonedDateTime currentDateTime = ZonedDateTime.now(ZoneId.of("Europe/London"));
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss z");
+		ZonedDateTime zonedDateTime = ZonedDateTime.parse("2015-05-05 10:15:30 Europe/Paris", formatter);
 
 	ZonedDateTime newDateTime = currentDateTime.plusDays(7);	
 	// Truncate to the nearest hour
@@ -339,7 +341,7 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 		
 + ZoneOffset class represents a fixed time offset (difference in hours/mins between a specific time zone and UTC) from UTC.
 		ZoneOffset offset = ZoneOffset.ofHours(3);
-	ZoneOffset utcOffset = ZoneOffset.UTC;
+	ZoneOffset utcOffset = ZoneOffset.UTC; //ZoneOffset.UTC returns a mere ZoneOffset with ID "Z", offset of 0 and default zone rules.
 
 + OffsetDateTime class represents a datetime with a fixed offset from UTC. Passend für Situationen wo z.B. daylight saving time (DST) nicht relevant. z.B. fixe UTC+1 MDS
 	offsetDateTime = ldt + ZoneOffSet
@@ -361,9 +363,16 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 	Instant currentInstant = Instant.now();
 	Instant instantFromZonedDateTime = zonedDateTime.toInstant(); date.toInstant()	
 
-+ Date class
++ Date class aus java.util.Date; sehr alt pre java8; Nimmt Java default system time zone her. represents the number of sec (unix epoch time)
 	Date date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").parse("2012-05-20T09:00:00.000Z");
 	Date dateNow = new Date();
 	System.out.println("execute() nowTime: "+ DateTimeHelper.date2String_T_Z_Format(dateNow));
 	Date datePast = new Date(dateNow.getTime()-(1000*60*sdio.timeRepeatInterval)); //ms * seconds * minutes
 	System.out.println("execute() : "+ DateTimeHelper.date2String_T_Z_Format(datePast));
+		SimpleDateFormat formatter = new SimpleDateFormat("dd-M-yyyy hh:mm:ss a", Locale.ENGLISH);
+		formatter.setTimeZone(TimeZone.getTimeZone("America/New_York"));
+		
+		String dateInString = "22-01-2015 10:15:55 AM"; 
+		Date date = formatter.parse(dateInString);
+		String formattedDateString = formatter.format(date);
+		TimeZone.setDefault(TimeZone.getTimeZone("GMT"));
