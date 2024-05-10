@@ -296,7 +296,8 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 	https://medium.com/@hoangxuantoank13/a-simple-way-to-pocket-date-time-in-java-8-0b0288b73452
 	Overview diagram zu den Klassen: https://miro.medium.com/v2/resize:fit:1400/format:webp/0*EpMHWU1U8JOHeix4.png
 
-+ LocalDateTime class represents date and time without any time zone information
++ LocalDateTime class represents date and time without any time zone information	
+	.withZone() hat keinen Effekt auf ldt, sondern nur auf ZonedDateTime und OffsetDateTime
 	LocalDateTime localDateTime = LocalDateTime.parse("2015-02-20T06:30:00");
 	LocalDateTime currentDateTime = LocalDateTime.now();
 	LocalDateTime newDateTime = currentDateTime.plusDays(7);
@@ -305,7 +306,7 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 	LocalDateTime ldt3 = LocalDateTime.ofInstant(Instant.now(), ZoneOffset.UTC).truncatedTo(ChronoUnit.SECONDS);
 
 + ZonedDateTime represents date and time in a particular time zone. Includes info about the time offset from UTC.
-	daylight saving time (DST) wird beachtet.
+	daylight saving time (DST) wird beachtet. .withZone() hat keinen Effekt auf ldt, sondern nur auf ZonedDateTime und OffsetDateTime
 	zdt objekt = ldt + zoneId
 	// Using LocalDateTime and ZoneId
 	LocalDateTime localDateTime = LocalDateTime.of(2023, 11, 6, 14, 30);
@@ -344,6 +345,7 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 	ZoneOffset utcOffset = ZoneOffset.UTC; //ZoneOffset.UTC returns a mere ZoneOffset with ID "Z", offset of 0 and default zone rules.
 
 + OffsetDateTime class represents a datetime with a fixed offset from UTC. Passend für Situationen wo z.B. daylight saving time (DST) nicht relevant. z.B. fixe UTC+1 MDS
+	.withZone() hat keinen Effekt auf ldt, sondern nur auf ZonedDateTime und OffsetDateTime
 	offsetDateTime = ldt + ZoneOffSet
 	LocalDateTime localDateTime = LocalDateTime.of(2023, 11, 6, 14, 30);
 	ZoneOffset zoneOffset = ZoneOffset.ofHours(3);  // For UTC+03:00
