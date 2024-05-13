@@ -390,6 +390,7 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 	LocalDateTime ldt = instant.atZone(ZoneId.systemDefault()).toLocalDateTime();
 	DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
 	System.out.println(ldt.format(fmt));
+		dateJava = new java.util.Date(dateSql.getTime()); //java.sql.Date to java.util.Date object
 
 + .withZone() hat keinen Effekt auf ldt, sondern nur auf ZonedDateTime und OffsetDateTime. Zeit die Zeitzone im time String an.
 	2024-05-09 10:30:00 UTC+01:00
