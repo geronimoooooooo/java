@@ -190,6 +190,7 @@ X   Time zone   ISO 8601 time zone  -08; -0800; -08:00
 "EEE, d MMM yyyy HH:mm:ss Z"    Wed, 4 Jul 2001 12:08:56 -0700
 "yyMMddHHmmssZ" 010704120856-0700
 "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"   2001-07-04T12:08:56.235-0700
+Date date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").parse("2012-05-20T09:00:00.000Z");
 "yyyy-MM-dd'T'HH:mm:ss.SSSXXX"   2001-07-04T12:08:56.235-07:00
 "YYYY-'W'ww-u"  2001-W27-3
 "yyyy-MM-dd HH:mm:ssXXX" 2024-05-09 23:35:08+01:00 wenn objekt timezone info hat, wie z.B. OffsetDateTime, ZonedDateTime
