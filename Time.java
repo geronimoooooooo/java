@@ -196,6 +196,10 @@ Date date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").parse("2012-05-
 "yyyy-MM-dd HH:mm:ssXXX" 2024-05-09 23:35:08+01:00 wenn objekt timezone info hat, wie z.B. OffsetDateTime, ZonedDateTime
 YYYY-MM-DD"T"HH24:MI:SS"Z" in Oracle NLS zeigt in Spalte Datum die standard Z ISO Zeit an
 ("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").parse("2012-05-20T09:00:00.000Z");
+	TO_DATE('2024-05-14T18:50:00', 'yyyy-MM-dd"T"HH24:mi:ss')
+	dateTime = listOneMeasurementProcess.get(0).replace(' ', 'T');
+	String dateTimeFormat = "yyyy-MM-dd\"T\"HH24:mi:ss";
+	toDate = "TO_DATE('" + dateTime + "', 'yyyy-MM-dd\"T\"HH24:mi:ss')";
 ---------------------------------------------------------------
 http://stackoverflow.com/questions/4772425/change-date-format-in-a-java-string
 ---------------------------------------------------------------
