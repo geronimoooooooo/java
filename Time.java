@@ -200,6 +200,9 @@ YYYY-MM-DD"T"HH24:MI:SS"Z" in Oracle NLS zeigt in Spalte Datum die standard Z IS
 	dateTime = listOneMeasurementProcess.get(0).replace(' ', 'T');
 	String dateTimeFormat = "yyyy-MM-dd\"T\"HH24:mi:ss";
 	toDate = "TO_DATE('" + dateTime + "', 'yyyy-MM-dd\"T\"HH24:mi:ss')";
+  SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+  sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
+  return sdf.format(date);
 ---------------------------------------------------------------
 http://stackoverflow.com/questions/4772425/change-date-format-in-a-java-string
 ---------------------------------------------------------------
