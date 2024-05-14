@@ -346,6 +346,13 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 
 	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss z");
 	String formattedDateTime = currentDateTime.format(formatter);
+		ZonedDateTime zonedDateTime = ZonedDateTime.now(); // Get current ZonedDateTime
+		// Convert ZonedDateTime to UTC+1
+		LocalDateTime utc1 = zonedDateTime.withZoneSameInstant(ZoneId.of("UTC+1")).toLocalDateTime();
+		utc1 = utc1.truncatedTo(ChronoUnit.SECONDS);
+		DateTimeFormatter dtf = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
+		String utc1Formatted = dtf.format(utc1);
+    
 
 + ZoneId class represents a time zone; convert datetime between timezones
 	ZoneId zoneParis = ZoneId.of("Europe/Paris");
