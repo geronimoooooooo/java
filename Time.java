@@ -407,6 +407,10 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 		dateJava = new java.util.Date(dateSql.getTime()); //java.sql.Date to java.util.Date object
 	java.util.Date date = Date.from( instant ) ;
 	Instant instant = myJavaUtilDate.toInstant() ;
+		dateSql = rs.getDate("DATUM");
+		System.out.println("z time: "+TimeConverter.formatUTCTZ(new java.util.Date(dateSql.getTime())));
+		java.util.Date newDate = rs.getTimestamp("DATUM");
+		System.out.println("z time with getTimestamp: "+TimeConverter.formatUTCTZ(newDate));
 
 + SimpleDateFormat is not threadsafe. uses default timezone of system if none specified
 	SimpleDateFormat shortTimeFormat = new SimpleDateFormat("HH:mm");
