@@ -1,5 +1,6 @@
 
 ### HOW TO DO #################################################################
+### ConvertFromFormatToFormat ##################################################
 ### FORMATTING STRINGS ###########################################################
 ### SUBSTRING #################################################################
 ### CONVERTING #################################################################
@@ -145,6 +146,23 @@ public String getCurrentTimeStamp() {
     return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date());
 }
 ---------------------------------------------------------------
+### ConvertFromFormatToFormat ##################################################
+	https://www.ionos.com/digitalguide/websites/web-development/iso-8601/
+	
+ZeitString(FormatA) wird geparsed zu Date und Date wird dann mit FormatB zu String formatiert
+	
+public static String getOurDate() {
+	String dateStr = "2019-09-26T07:58:30.996+0200";
+	DateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+	try {
+	    Date unformatedDate = format.parse(dateStr);
+	    String formatedDate = new SimpleDateFormat("HH:mm dd.MM.yyyy").format(unformatedDate);
+	    return formatedDate; //07:58 26.09.2019
+	    }   catch (ParseException e){
+		    System.out.println("Error");
+	    }
+	    return dateStr;
+}
 ### FORMATTING STRINGS ##########################################################################
 System.out.println(LocalDateTime.now().truncatedTo(ChronoUnit.MILLIS)); 2023-10-06T17:25:35.401
 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSS");
