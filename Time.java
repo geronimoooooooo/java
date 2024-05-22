@@ -440,7 +440,7 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 
 + SimpleDateFormat is not threadsafe. uses default timezone of system if none specified
 	SimpleDateFormat shortTimeFormat = new SimpleDateFormat("HH:mm");
-        shortTimeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+        shortTimeFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
 
 + .withZone() hat keinen Effekt auf ldt, sondern nur auf ZonedDateTime und OffsetDateTime. Zeit die Zeitzone im time String an.
 	2024-05-09 10:30:00 UTC+01:00
