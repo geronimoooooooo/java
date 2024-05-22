@@ -26,6 +26,14 @@ long durationTime = System.nanoTime() - startTime;
 String duration = Long.toString(durationTime);
 System.out.println("elapsed time in ms:" + endTime / 1000000);
 
+if(KlimaApp.zeitOffset.equals("0")) {
+	java.util.TimeZone.setDefault(java.util.TimeZone.getTimeZone("GMT"));
+	System.out.println("timedefault GMT: " + TimeZone.getDefault());
+}else if(KlimaApp.zeitOffset.equals("1")) {
+	java.util.TimeZone.setDefault(java.util.TimeZone.getTimeZone("GMT+1"));
+	System.out.println("timedefault: GMT+1 " + TimeZone.getDefault());
+}
+
 -----------------------------------------------------------------------------------
 	https://www.youtube.com/watch?v=9hUEiu_Ts68
 -----------------------------------------------------------------------------------
