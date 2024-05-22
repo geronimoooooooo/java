@@ -8,8 +8,8 @@
 
 ### HOW TO DO #################################################################
 Measure Elapsed Time mit Instant: https://howtodoinjava.com/java/date-time/intro-to-date-time-api/
-Date to String with DateTimeFormatter
-https://stackoverflow.com/questions/42210257/java-util-date-to-string-using-datetimeformatter
+Date to String with DateTimeFormatter https://stackoverflow.com/questions/42210257/java-util-date-to-string-using-datetimeformatter
+Date to Lcd und Instant https://www.baeldung.com/java-date-to-localdate-and-localdatetime
 
 https://medium.com/elca-it/how-to-get-time-zones-right-with-java-8dea13aabe5c
 set date time zone
