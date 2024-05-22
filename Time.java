@@ -346,7 +346,7 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 	LocalDateTime ldt3 = LocalDateTime.ofInstant(Instant.now(), ZoneOffset.UTC).truncatedTo(ChronoUnit.SECONDS);
 
 + ZonedDateTime represents date and time in a particular time zone. Includes info about the time offset from UTC.
-	daylight saving time (DST) wird beachtet. .withZone() hat keinen Effekt auf ldt, sondern nur auf ZonedDateTime und OffsetDateTime. Zeit die Zeitzone im time String an.
+	daylight saving time (DST) wird beachtet. Region wichtiger als +-Stunden .withZone() hat keinen Effekt auf ldt, sondern nur auf ZonedDateTime und OffsetDateTime. Zeigt die Zeitzone im time String an.
 	zdt objekt = ldt + zoneId
 	// Using LocalDateTime and ZoneId
 	LocalDateTime localDateTime = LocalDateTime.of(2023, 11, 6, 14, 30);
