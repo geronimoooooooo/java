@@ -344,10 +344,13 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 	String formattedDateTime = currentDateTime.format(formatter);
 	LocalDateTime ldt3 = LocalDateTime.ofInstant(Instant.now(), ZoneOffset.UTC).truncatedTo(ChronoUnit.SECONDS);
+		
+		LocalDateTime ldt = LocalDateTime.parse("2024-03-31T01:22:22");		
+		System.out.println("ldt: "+ldt);// ldt: 2024-03-31T02:22:22
 
 + ZonedDateTime represents date and time in a particular time zone. Includes info about the time offset from UTC.
 	daylight saving time (DST) wird beachtet. Region wichtiger als +-Stunden .withZone() hat keinen Effekt auf ldt, sondern nur auf ZonedDateTime und OffsetDateTime. Zeigt die Zeitzone im time String an.
-	zdt objekt = ldt + zoneId
+	znd objekt = ldt + zoneId
 	// Using LocalDateTime and ZoneId
 	LocalDateTime localDateTime = LocalDateTime.of(2023, 11, 6, 14, 30);
 	ZoneId zoneId = ZoneId.of("America/New_York");
@@ -381,6 +384,10 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 		utc1 = utc1.truncatedTo(ChronoUnit.SECONDS);
 		DateTimeFormatter dtf = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
 		String utc1Formatted = dtf.format(utc1);
+
+	ZonedDateTime znd = ldt.atZone(ZoneId.of("Europe/Paris"));
+	System.out.println("znd: "+znd); //znd: 2024-03-31T03:22:22+02:00[Europe/Paris]
+	System.out.println("znd: "+znd.toLocalDateTime()); //znd: 2024-03-31T03:22:22
     
 
 + ZoneId class represents a time zone; convert datetime between timezones
@@ -407,6 +414,10 @@ System.out.println(formattedDate);	//	03-05-2020 13:46
 	OffsetDateTime newDateTime = originalDateTime.withOffsetSameInstant(ZoneOffset.ofHours(2));
 	// Change the offset without changing the instant
 	OffsetDateTime updatedDateTime = originalDateTime.withOffsetSameLocal(ZoneOffset.ofHours(2));
+
+		OffsetDateTime offs = OffsetDateTime.now();			
+		offs = ldt.atOffset(ZoneOffset.of("+01:00"));
+		System.out.println("offs:"+offs.toLocalDateTime()); //offs:2024-03-31T02:22:22
 
 + Instant class liefert UTC Zeit,
 	Instant currentInstant = Instant.now();
